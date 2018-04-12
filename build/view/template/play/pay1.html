@@ -1,0 +1,113 @@
+
+    <section class="recharge_header">
+        <div class="fl b_num">
+            <p class="num">0</p>
+            <p class="yue">当前余额</p>
+        </div>
+        <div class="fr">
+            <a href="#" class="btn recharge_list_btn">明细</a>
+        </div>
+    </section>
+            
+    <!-- 推广 -->
+<input type="hidden" name="coupons" id="J-coupons" value='[]' >
+<input type="hidden" name="dijiaNum" value="" id="J-dijiaNum">
+
+
+    <section class="recharge_main mgt50">
+        <form id="J-frmRecharge" action="" method="post">
+            <h3>点击充值<span class="colb8272d">(1元=100粮票)</span>：</h3>
+            <input name="_csrf" type="hidden" id="_csrf" value="WTROTHNtWEQ7QC05GCIxDTp4Hg4dJz4jDUcDKBYaLAkdUAo0PVlsBg==">
+            <div class="b_select_box mgt30">
+                <input type="hidden" name="coupon_id" id="coupon_id" >
+                <input type="hidden" name="coupon_record_id" id="coupon_record_id" value="">
+
+                <ul class="J-denItems clearfix">
+                                        <li class="hasThreeItems " data-denomination="19.00" data-nid="1"">
+                        <p class="price"> 19.00元</p>
+                        <!--  <p class="p_lp">粮票</p>-->
+                                                	<p class="p_other"><span class="yellow ver-t-bot">共</span>1900粮票</p>
+                                                                        <!--  <p class="p_other"><span class="yellow ver-t-bot">赠</span>--><!--  补签卡</p>-->                    </li>
+                                    <li class="hasThreeItems cur" data-def="1"" data-denomination="29.00" data-nid="2"">
+                        <p class="price"> 29.00元</p>
+                        <!--  <p class="p_lp">粮票</p>-->
+                                                	<p class="p_other"><span class="yellow ver-t-bot">送</span>2元</p>
+                        	<p class="p_other"><span class="yellow ver-t-bot">共</span>3100粮票</p>
+                                                                        	<i class="recharge_hot"></i>
+                                                <!--  <p class="p_other"><span class="yellow ver-t-bot">赠</span>--><!--  补签卡</p>-->                    </li>
+                                    <li class="hasThreeItems " data-denomination="50.00" data-nid="3"">
+                        <p class="price"> 50.00元</p>
+                        <!--  <p class="p_lp">粮票</p>-->
+                                                	<p class="p_other"><span class="yellow ver-t-bot">送</span>10元</p>
+                        	<p class="p_other"><span class="yellow ver-t-bot">共</span>6000粮票</p>
+                                                                        <!--  <p class="p_other"><span class="yellow ver-t-bot">赠</span>--><!--  补签卡</p>-->                    </li>
+                                    <li class="hasThreeItems " data-denomination="100.00" data-nid="5"">
+                        <p class="price"> 100.00元</p>
+                        <!--  <p class="p_lp">粮票</p>-->
+                                                	<p class="p_other"><span class="yellow ver-t-bot">送</span>25元</p>
+                        	<p class="p_other"><span class="yellow ver-t-bot">共</span>12500粮票</p>
+                                                                        <!--  <p class="p_other"><span class="yellow ver-t-bot">赠</span>--><!--  补签卡</p>-->                    </li>
+                                    <li class="hasThreeItems " data-denomination="200.00" data-nid="6"">
+                        <p class="price"> 200.00元</p>
+                        <!--  <p class="p_lp">粮票</p>-->
+                                                	<p class="p_other"><span class="yellow ver-t-bot">送</span>60元</p>
+                        	<p class="p_other"><span class="yellow ver-t-bot">共</span>26000粮票</p>
+                                                                        <!--  <p class="p_other"><span class="yellow ver-t-bot">赠</span>--><!--  补签卡</p>-->                    </li>
+                                </ul>
+            </div>
+            <input type="hidden" name="cfgfoodid" value="0" id="J-rechargeNum" data-price="" >
+
+            <!--v2.6.2 新增抵价券DOM start-->
+            <div class="recharge_dijia_box">
+                <!--判断如果无可用代金券请使用以下注释的DOM-->
+                                    <!--<div class="recharge_daijin_none">暂时无可用的代金券</div>-->
+                
+            <div class="col btns">
+                <input type="hidden" name="openid" value="" id="openid">
+                <!--<input name="_csrf" type="hidden" id="_csrf" value="WTROTHNtWEQ7QC05GCIxDTp4Hg4dJz4jDUcDKBYaLAkdUAo0PVlsBg==">
+                -->
+                <a href="javascript:void(0);" class="btn bg-red" id="J-frmSubmit">立即支付</a>
+            </div>
+        </form>
+    </section>
+
+    <section class="recharge_note">
+        <p class="info">温馨提示：</p>
+        <p>1、充值成功后金额会立即到达您的账户中；</p>
+        <p>2、如果购买成功后，账户余额没有变化，请及时在公众号上联系我们客服，我们将在第一时间为您解决。</p>
+        <p>3、客服微信：13616817041 &nbsp;
+            客服热线：13616817041<br/>
+            由于微信访问人数过多，会比较慢，请耐心等候。<br/>
+            客服工作时间：9:00—21:00
+            祝您阅读愉快！~</p>
+    </section>
+
+
+<!--v2.6.2 抵价券弹出层-->
+<!--抵价券Mask-->
+<section class="g-maskDiv qrCodePayBoxMask" id="J_dijiaMask"></section>
+<div class="recharge_dijia_list">
+    <div class="recharge_dijia_title">请选择抵价券</div>
+    <!--抵价券列表-->
+    <ul class="recharge_dijia_ul">
+            </ul>
+    <div class="recharge_dijia_cancel">不使用抵价券</div>
+</div>
+
+    <!--v2.5.1 二维码支付 2017-03-16-->
+    <section class="g-maskDiv qrCodePayBoxMask" id="J_maskDiv"></section>
+    <section class="qrCodePayBox" id="J_qrCodePayBox">
+        <div class="closeBtn" id="J_qrCodePayCloseBtn">关闭</div>
+        <div class="qrCodeArea">
+            <img alt="支付二维码" id="J_payQRCodeImg" src="http://ysgwcdn.kuzu.com/static//img/youwenxs_mp_qrcode.png">
+            <p class="note_info">
+                长按二维码识别支付
+            </p>
+        </div>
+        
+    </section>
+    
+
+
+
+

@@ -1,0 +1,44 @@
+<!-- <div app-headbar text="登录"></div> -->
+<header class="header_bar">
+    <div class="header_warp">
+        <a class="goback_btn fl" ng-click="backlogin();">
+            <img src="image/back.png" alt="">
+            <span>返回</span>
+        </a>
+        <div class="page_title">登录</div>
+    </div>
+</header>
+<div style="height:1.17333333rem;"></div>
+<section class="container">
+    <div class="reg_box">
+        <form id="loginForm" name="loginForm">
+            <div class="reg_items">
+                <div class="reg_item mgt30 clearfix">
+                    <span class="reg_name rec_icons uc_name">&nbsp;</span>
+                    <div class="reg_text">
+                        <input type="tel" name="phone" ng-model="user.phone" validator="required,phone" placeholder="手机号码" class="reg_int"/>
+                    </div>
+                </div>
+                <div class="reg_item mgt30 clearfix">
+                    <span class="reg_name rec_icons uc_pwd">&nbsp;</span>
+                    <div class="reg_text">
+                        <input type="password" ng-model="user.pwd" id="inputClick" name="pwd" validator="required,pwd" placeholder="输入录密码" class="reg_int"/>
+                    </div>
+                </div>
+            </div>
+            <div class="login_btn_box mgt10">
+                <input type="submit" validation-submit='loginForm' ng-click='submit();' class="btn btn_green green" value="提交">
+                <div class="login_link mgt30 clearfix">
+                    <a class="fl" ui-sref="register">新用户注册</a>
+                    <a class="fr" ui-sref="forgotpassword">忘记密码？</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<div ng-show="loading" class="loadingImg">
+    <img src="image/loading.png" alt="">
+</div>
+<p class="yq_tips_box" ng-show="isTipContent"><span ng-bind="tipContent"></span></p>
+<!--reg_int ng-pristine ng-pending ng-empty ng-touched-->
+<!--reg_int ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-pwd-->

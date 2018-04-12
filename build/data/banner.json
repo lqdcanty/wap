@@ -1,0 +1,13 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+    "data": [
+        {
+            "id": 9,
+            "bannerCode": "BN1708301527580381366",
+            "bannerName": "测试广告two",
+            "imgUrl": "image/banner1.jpg"
+        }
+    ]
+}

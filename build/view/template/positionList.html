@@ -1,0 +1,10 @@
+<ul class="position-list bg-w">
+ 	<li ui-sref="position({id:item.id})"  class="item" ng-repeat="item in data">
+		<img ng-src="{{item.imageUrl}}" alt="" class="logo f-l">
+		<h3 class="title" ng-bind="item.job"></h3>
+		<p class="text" ng-bind="item.companyName+'['+item.cityName+']'+item.industryName"></p>
+		<p class="text" ng-bind="item.date"></p>
+		<div class="clear"></div>
+	</li> 
+</ul>
+<!-- 这里要注意的是，ui-sref是专门做路由的点击内置指令，但是这里传入的时候要注意他的写法，以函数的形式调用他，同时传入一个对象 -->

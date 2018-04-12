@@ -1,0 +1,24 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+    "data":[
+        {
+            "bookId":1,
+            "bookName":"小说名称",
+            "bookCover":"image/76899fcdad5.jpg",
+            "progress":-1
+        },{
+            "bookId":1,
+            "bookName":"小说名称",
+            "bookCover":"image/383436d3c58.jpg",
+            "progress":20
+        },{
+            "bookId":1,
+            "bookName":"小说名称",
+            "bookCover":"image/982728a57ba.jpg",
+            "progress":40
+        }
+    ]
+}
+

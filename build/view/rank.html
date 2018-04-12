@@ -1,0 +1,33 @@
+<div app-nav class="bordert"></div>
+<div class="pdt20">
+	<section class="column_index bgchenge bgbody">
+        <!--======月榜======-->
+        <div class="list_rank bgwhite" ng-repeat="rank in rankClass">
+          <div class="col_title">
+              <h3 class="fl"><span ng-bind="rank.rankingName"></span></h3>
+              <a class="more_btn fr" ui-sref="ranklistsame({styleName:rank.rankingName,rankingId:rank.rankingId})" ng-click="rankMore(rank)">
+                <span class="newMore">更多</span>
+                <img src="image/more_n.png" alt="" class="newMoreImge">
+                <img src="image/more_p.png" alt="" class="newMoreImge newMoreImgeL">
+              </a>
+          </div>
+          <div class="rank_box">
+                <a class="rank_list" ng-click="rankFunction(rak,rank.rankingName,$index)" ui-sref="bookdetail({bookId:rak.bookId})" ng-repeat="rak in rank.bookList" >
+                  <!--   <a> -->
+                        <div class="book_img">
+                          <img ng-src="{{rak.bookCover}}">
+                          <div class="mcc" ></div>
+                        </div>
+                        <p class="book_text" ng-bind="rak.bookName"></p>
+                   <!--  </a> -->
+                </a>
+          </div>
+      </div>
+    </section>
+</div>
+<div ng-show="loading" class="loadingImg">
+    <img src="image/loading.png" alt="">
+</div>
+<p class="yq_tips_box" ng-show="isTipContent"><span ng-bind="tipContent"></span></p>
+<div style="height:1.68rem"></div>
+<div app-foot></div>

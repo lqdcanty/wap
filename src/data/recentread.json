@@ -1,0 +1,26 @@
+{
+	"httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+    "data":{
+            "list":[
+    	       {
+                    "bookId":1,
+                    "bookName":"1小说名称",
+                    "progress":"1章节名称"
+                },{
+                    "bookId":1,
+                    "bookName":"2小说名称",
+                    "progress":"2章节名称"
+                },{
+                    "bookId":1,
+                    "bookName":"3小说名称",
+                    "progress":"3章节名称"
+                },{
+                    "bookId":1,
+                    "bookName":"4小说名称",
+                    "progress":"4章节名称"
+                }
+            ]
+        }
+}

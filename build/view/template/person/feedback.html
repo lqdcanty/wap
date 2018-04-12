@@ -1,0 +1,28 @@
+<div ng-app="myfeedback" ng-controller="feedbackCtrl">
+    <header class="header_bar">
+        <div class="header_warp">
+            <a class="goback_btn fl" ui-sref="my">返回</a>
+            <div class="page_title">意见反馈</div>
+            <a id="submitBtn" class="save_btn feedback_btn fr" ng-click="saveUser()">提交</a>
+        </div>
+    </header>
+    <section class="container">
+        <div class="form_items">
+            <form onsubmit="return false;" id="feedbackFrom">
+            <input name="_csrf" type="hidden" id="_csrf" value="Y1hQWi04eHIkMzV3GVQUPwgiIW5uVjsgID4BbmdeAUUpOjQ7QFRMFQ==">
+                <div class="form_item">
+                    <input name="title" class="feedback_int" ng-model="titleText"  id="feedbackTitle" type="text" placeholder="意见标题"/>
+                </div>
+                <div class="form_item">
+                    <textarea name="content" class="feedback_int feedback_text" id="feedbackText" placeholder="意见内容"></textarea>
+                </div>
+            </form>
+        </div>
+        <!--成功提示-->
+        <div class="feedback_popup">
+            <h2 class="mgt30">信息提交成功!</h2>
+            <p class="mgt10">非常非常感谢您提供的宝贵意见，我们将尽快给您答复。</p>
+        </div>
+        <div class="popup_bg"></div>
+    </section>
+</div>

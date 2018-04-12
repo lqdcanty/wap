@@ -1,0 +1,26 @@
+ <div app-headbar text="新用户注册"></div>
+ <div style="height:1.17333333rem;"></div>
+<section class="container">
+    <div class="reg_box">
+        <form method="post" name="formRegister">
+            <div class="reg_items">
+                <div class="reg_item mgt30 clearfix">
+                    <span class="reg_name">+86</span>
+                    <div class="reg_text">
+                           <input type="text" id="registerN" name="phone" ng-model="user.phone" validator="required,phone"  placeholder="请输入手机号码" class="reg_int" ng-blur="setBlur()" ng-click="getFocus()"/>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="reg_tips mgt20">
+            用手机号码注册可以方便找回和交到更多朋友…
+        </div>
+        <div class="login_btn_box mgt90">
+            <a href="javascript:;" class="btn btn_green green" validation-submit="formRegister" ng-click="submit()">下一步</a>
+        </div>
+    </div>
+</section>
+<div ng-show="loading" class="loadingImg">
+    <img src="image/loading.png" alt="">
+</div>
+<p class="yq_tips_box" ng-show="isTipContent"><span ng-bind="tipContent"></span></p>

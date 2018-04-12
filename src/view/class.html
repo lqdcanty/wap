@@ -1,0 +1,35 @@
+<div app-nav style="border-bottom: 1px solid rgb(229,229,229)"></div>
+<!-- <div app-class></div> -->
+<!-- 分类列表 -->
+<div class="boygrilStyle">
+    <a href="javascript:void(0)" class="{{isBoyGril?'active':''}}" ng-click="grilStyle()">女频</a>
+    <a href="javascript:void(0)" class="{{!isBoyGril?'active':''}}" ng-click="boyStyle()">男频</a>
+</div>
+<section class="category_box mgt20" ng-show="isBoyGril">
+    <ul class="warp">
+        <li ng-repeat="sty in grilbookstyle" ui-sref="listsame({classCode:sty.classCode,bookClass:sty.bookClass})">
+            <a>
+                <img ng-src="{{sty.imageUrl}}" alt="">
+                <p ng-bind="sty.bookClass"><!-- <br>共本 --></p>
+                <span class="mc"></span>
+            </a>
+        </li>
+    </ul>
+</section>
+<section class="category_box mgt20" ng-hide="isBoyGril">
+    <ul class="warp">
+        <li ng-repeat="sty in boybookstyle" ui-sref="listsame({classCode:sty.classCode,bookClass:sty.bookClass})">
+            <a>
+                <img ng-src="{{sty.imageUrl}}" alt="">
+                <p ng-bind="sty.bookClass"><!-- <br>共本 --></p>
+                <span class="mc"></span>
+            </a>
+        </li>
+    </ul>
+</section>
+<div style="height:1.68rem"></div>
+<div app-foot></div>
+<div ng-show="loading" class="loadingImg">
+    <img src="image/loading.png" alt="">
+</div>
+<p class="yq_tips_box" ng-show="isTipContent"><span ng-bind="tipContent"></span></p>

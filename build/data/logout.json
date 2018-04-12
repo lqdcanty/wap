@@ -1,0 +1,8 @@
+{
+	"httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+	"data":{
+	 	"state": 1
+	}
+}

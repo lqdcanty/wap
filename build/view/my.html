@@ -1,0 +1,68 @@
+<div class="my">
+    <!--[content start]-->
+	<section class="container">
+	    <div class="uc_header" >
+	        <p>
+	            <a ui-sref="personalinformation">
+					<img ng-src="{{(imgUrl=='null'||imgUrl==undefined)?'image/headnew.png':imgUrl}}" class="user_avatar" alt="">
+					<span class="u_name mgt30" ng-bind="userName"></span>
+				</a>
+	        </p>
+	    </div>
+	    
+	    <div class="col brd">
+	        <div class="col_warp hasgo">
+	            <a ui-sref="pay">
+	            <i class="uc_icon uc_incon_balance">
+	            </i>我的元气  <span class="balance_num mgr50 fr">充值</span></a>
+	        </div>
+	    </div>
+	    <div class="col brd">
+	        <div class="col_warp hasgo">
+	            <a ui-sref="bookstore({router:'my'})">
+	            <i class="uc_icon uc_incon_signin"></i>
+	            我的书架<span class="balance_num mgr50 fr"></span></a>
+	        </div> 
+	    </div>
+	    <div class="col brd">
+	        <div class="col_warp hasgo">
+	            <a ui-sref="havabuy">
+	            <i class="uc_icon uc_incon_coupon"></i><span class="balance_num mgr50 fr"></span>已购买</a>
+	        </div>
+	    </div>
+	    <div class="col brd">
+	        <div class="col_warp hasgo">
+	            <a ng-click="unopenTip()">
+	            <i class="uc_icon uc_incon_mybooks"></i>签到</a>
+	        </div>
+	    </div>
+	    <div class="col mgt20 brd">
+	        <div class="col_warp hasgo">
+	            <a ng-click="unopenTip()">
+	            <i class="uc_icon uc_incon_share"></i>分享好友</a>
+	        </div>
+	    </div>
+	    <div class="col brd" >
+	        <div class="col_warp hasgo">
+	            <a ui-sref="problems">
+	            <i class="uc_icon uc_incon_cjwt"></i>常见问题</a>
+	        </div>
+	    </div>
+	    <div class="col brd" >
+	        <div class="col_warp hasgo">
+	            <a ui-sref="feedback">
+	            <i class="uc_icon uc_incon_faq"></i>问题反馈</a>
+	        </div>
+	    </div>
+	    <div class="col brd">
+	        <div class="col_warp hasgo">
+	            <a ui-sref="sercetset">
+	            <i class="uc_icon uc_incon_aqsz"></i>安全设置</a>
+	        </div>
+	   </div>
+	</section>
+	<div class="popup_bg" ng-show="isloginout"></div>
+</div>
+<div style="height:1.68rem"></div>
+<div app-foot></div>
+<p class="yq_tips_box" ng-show="isTipContent"><span ng-bind="tipContent"></span></p>

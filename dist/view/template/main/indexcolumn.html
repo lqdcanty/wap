@@ -1,0 +1,17 @@
+<section class="column_index bgwhite">
+    <div class="col_warp">
+        <div class="col_item" ui-sref="bookdetail({id:book.bookId})" ng-repeat="book in com">
+            <a>
+                <img ng-src="{{book.bookCover}}" alt="{{book.bookName}}" class="book_cover fl mgr20">
+                <div class="book_info">
+                    <p class="book_name" ng-bind="book.bookName"></p>
+                    <p class="book_intro mgt10" ng-bind="book.introduction"></p>
+                    <p class="book_author mgt20 book_authordetail">
+                       <span class="book_favorite">关注</span><span ng-bind="book.concern"></span>
+                       <span class="book_see">浏览数</span><span ng-bind="book.reading">7890</span>
+                    </p>
+                </div> 
+            </a>
+        </div>
+    </div>
+</section>

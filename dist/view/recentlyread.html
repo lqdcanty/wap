@@ -1,0 +1,33 @@
+<!--<div app-headbar text="最近阅读"></div>-->
+<header class="header_bar">
+	<div class="header_warp">
+		<a class="goback_btn fl" ui-sref="main">
+			<img src="image/back.png" alt="">
+    		<span>返回</span>
+		</a>
+		<div class="page_title">最近阅读</div>
+		<a class="search_btn fr" href="#">搜索</a>
+	</div>
+</header>
+<div style="height:1.17333333rem;"></div>
+<section class="recent-wrap" style="background-color:#fff">
+	<div class="nobook" ng-show="isbookstore">
+		<p class="nobook_p">暂无书籍</p>
+	</div>
+	<div class="recent-list" ng-hide="isbookstore">
+		<div class="recent-item" ng-repeat="book in recentRead" ng-click="goRead(book)">
+		    <a class="box">
+		        <div class="recent-left flex-1">
+			        <div class="recent-title ellipsis" ng-bind="book.bookName"></div>
+			        <div class="recent-chapter ellipsis">读至<span ng-bind="book.progress" ></span></div>
+			        <!--  <div class="recent-time"></div>-->
+		        </div>
+		        <div class="recent-right">继续阅读></div>
+		    </a>
+		</div>
+	</div>
+</section>
+<div ng-show="loading" class="loadingImg">
+    <img src="image/loading.png" alt="">
+</div>
+<p class="yq_tips_box" ng-show="isTipContent"><span ng-bind="tipContent"></span></p>

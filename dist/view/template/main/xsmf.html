@@ -1,0 +1,24 @@
+<section class="column_index bgwhite mgt20">
+    <div class="col_title">
+        <h3 class="fl"><i class="fl title_icon title_icon_bjlj"></i><span>畅销精品</span></h3>
+        <a ui-sref="columnsamelist({id:booklist.columnId,columnName:booklist.columnName})" class="more_btn fr">更多</a>
+    </div>
+    <div class="col_warp">
+        <div class="col_item" ui-sref="bookdetail({id:book.bookId})" ng-repeat="book in booklist.bookList">
+            <a>
+                <img ng-src="{{book.bookCover}}" alt="{{book.bookName}}" class="book_cover fl mgr20">
+                <div class="book_info">
+                    <p class="book_name" ng-bind="book.bookName"></p>
+                    <p class="book_intro mgt10" ng-bind="book.introduction"></p>
+                    <p class="book_author mgt20 book_authordetail">
+                       <span class="book_favorite">关注</span><span ng-bind="book.concern"></span>
+                       <span class="book_see">浏览数</span><span ng-bind="book.reading">7890</span>
+                    </p>
+                </div> 
+            </a>
+        </div>
+    </div>
+    <div class="col_change J-changeBooks" ng-click="change(booklist)">
+        <div class="change_text">换一批</div>
+    </div>
+</section>

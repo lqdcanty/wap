@@ -1,0 +1,36 @@
+<div app-headbar text="安全设置"></div>
+<div style="height:1.17333333rem;"></div>
+<div>
+    <!--[content start]-->
+    <section class="container">
+        <div class="col brd mgt20" ng-hide="isJMShow">
+            <div class="col_warp hasgo">
+                <a ui-sref="changepassword" style="padding-left: 0.1rem">
+                    修改密码<span class="balance_num mgr50 fr"></span></a>
+            </div>
+        </div>
+        <div class="col brd" ng-show="isJMShow">
+             <div class="col_warp hasgo">
+                <a ui-sref="bindphone" style="padding-left: 0.1rem">
+                    绑定手机号<span class="balance_num mgr50 fr"></span></a>
+            </div>
+        </div>
+        <div class="reg_box">
+            <div class="login_btn_box mgt10" >
+                <a href="javascript:void(0);" id="thisBtn" class="btn btn_green green" ng-click="loginoutShow()">退出登录</a>
+            </div>
+        </div>
+    </section>
+    <div class="popup_bg" ng-show="isloginout"></div>
+    <div class="exit_box" ng-show="isloginout">
+        <div class="exit_topic">
+            <h4 class="exit_title">退出登录后，你将无法阅读此账号下的内容</h4>
+            <a class="exit_sure" ng-click="loginout()">退出登录</a>
+        </div>
+        <div class="exit_cancel mgt20" ng-click="loginoutN()">取消</div>
+    </div>
+</div>
+<div ng-show="loading" class="loadingImg">
+    <img src="image/loading.png" alt="">
+</div>
+<p class="yq_tips_box" ng-show="isTipContent"><span ng-bind="tipContent"></span></p>

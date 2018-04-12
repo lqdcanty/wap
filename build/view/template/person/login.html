@@ -1,0 +1,30 @@
+<section class="container">
+    <div class="reg_box">
+        <form id="loginForm" name="loginForm" ng-submit="login(account)"  novalidate="novalidate">
+            <div class="reg_items">
+                <div class="reg_item mgt30 clearfix">
+                    <span class="reg_name rec_icons uc_name">&nbsp;</span>
+                    <div class="reg_text">
+                        <input type="text" value="" name="phoneNum" id="phoneNum" placeholder="手机号码" maxlength="22" class="reg_int"/>
+                    </div>
+                </div>
+                <div class="reg_item mgt30 clearfix">
+                    <span class="reg_name rec_icons uc_pwd">&nbsp;</span>
+                    <div class="reg_text">
+                        <input type="password" name="password" id="password" placeholder="输入录密码,密码为6~32位字母或数字" maxlength="20" class="reg_int"/>
+                    </div>
+                </div>
+            </div>
+            <div class="login_btn_box mgt10">
+                <input type="submit" name="" id="thisBtn" class="btn btn_green" value="提交"></input>
+                <div class="login_link mgt30 clearfix">
+                    <a class="fl" ui-sref="register">新用户注册</a>
+                    <a class="fr" ui-sref="forgotpassword">忘记密码？</a>
+                </div>
+            </div>
+        </form>
+        <div class="popup_tips_box" style="display: block;">
+            <p class="popup_tips_content">请输入登录信息</p>
+        </div>
+    </div>
+</section>

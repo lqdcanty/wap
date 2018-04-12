@@ -1,0 +1,43 @@
+<header class="header_bar" ng-show="falseS">
+    <div class="header_warp">
+        <a class="goback_btn fl" ui-sref="my">
+            <img src="image/back.png" alt="">
+            <span>返回</span>
+        </a>
+        <div class="page_title">我的书架</div>
+    </div>
+</header>
+<div style="height:1.17333333rem;" ng-show="falseS"></div>
+<section class="book_rack_header" ng-show="bookcover">
+    <div class="bg-bookRack">
+        <div class="swiper-container swiper-container-bookRack" id="coverSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" ng-repeat="book in progressList" ng-click="goRead(book)">
+                    <img ng-src="{{book.recCover}}" alt="{{book.bookName}}" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blur_mask J-blurMask"></div>
+</section>
+<div app-toup></div>
+<!--<div app-collect coll="collectList"></div>-->
+<section class="bookRack_list lqd mgt20 clearfix">
+    <div class="nobook" ng-show="isbookstore">
+        <p class="nobook_p">暂无书籍</p>
+    </div>
+    <ul id="J-bookRackList" ng-hide="isbookstore">
+        <li ng-repeat="book in collectList"><a ng-click="goRead(book)">
+            <img ng-src="{{book.bookCover}}"
+                 alt="{{book.bookName}}" class="book_cover">
+            <p class="book_name" ng-bind="book.bookName"></p>
+            <p class="book_readstatus book_readstatus_readed"><b></b><span ng-bind="book.progress===-1?'0':book.progress"></span><span>%</span></p>
+        </a></li>
+    </ul>
+</section>
+<div style="height:1.68rem"></div>
+<div app-foot></div>
+<div ng-show="loading" class="loadingImg">
+    <img src="image/loading.png" alt="">
+</div>
+<p class="yq_tips_box" ng-show="isTipContent"><span ng-bind="tipContent"></span></p>

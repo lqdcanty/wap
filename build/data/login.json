@@ -1,0 +1,12 @@
+{
+	"httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+  	"data":{
+	  "userId": "asdf123sdf",
+	  "userName": "李前丹",
+	  "imgUrl": "image/c9bad91e2d9.jpg",
+	  "gender":"女",
+	  "sign":"励志要做好网站"
+  	}
+}

@@ -1,0 +1,34 @@
+
+<form name="feedbackForm" id="feedbackFrom">
+    <header class="header_bar">
+        <div class="header_warp">
+            <a class="goback_btn fl" ui-sref="my">
+                <img src="image/back.png" alt="">
+                <span>返回</span>
+            </a>
+            <div class="page_title">意见反馈</div>
+            <a id="submitBtn" class="save_btn feedback_btn fr" validation-submit='feedbackForm' ng-click="submit()">提交</a>
+        </div>
+    </header>
+    <div style="height:1.17333333rem;"></div>
+    <section class="container">
+        <div class="form_items">
+            <div class="form_item abc">
+                <input name="title" class="feedback_int" validator="required" ng-model="title" type="text" placeholder="意见标题"/>
+            </div>
+            <div class="form_item abc1">
+                <textarea name="content" class="feedback_int feedback_text" validator="required" ng-model="content" placeholder="意见内容"></textarea>
+            </div>
+        </div>
+        <!--成功提示-->
+        <div class="feedback_popup" ng-show="sendSuccess">
+            <h2 class="mgt30">信息提交成功!</h2>
+            <p class="mgt10">非常非常感谢您提供的宝贵意见，我们将尽快给您答复。</p>
+        </div>
+        <div class="popup_bg" ng-show="sendSuccess"></div>
+    </section>
+</form>
+<div ng-show="loading" class="loadingImg">
+    <img src="image/loading.png" alt="">
+</div>
+<p class="yq_tips_box" ng-show="isTipContent"><span ng-bind="tipContent"></span></p>

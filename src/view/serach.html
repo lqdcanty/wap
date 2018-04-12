@@ -1,0 +1,101 @@
+<!-- <div app-headbar text="搜索结果"></div> -->
+<header class="header_bar">
+    <div class="header_warp">
+        <a class="goback_btn fl" ui-sref="main">
+            <img src="image/back.png" alt="">
+            <span>返回</span>
+        </a>
+        <div class="page_title">搜索结果</div>
+    </div>
+</header>
+<div style="height:1.17333333rem;"></div>
+<!-- <div app-serachbox></div> -->
+ <section class="container">
+    <div class="search_bar pdt20">
+        <form class="search_outer box" name="serachForm">
+            <div class="search_inner flex-1 J-searchInner">
+                <i class="search_icon"></i>
+                <input class="search_input" name="searchVal" id="searchVal" value="" placeholder="输入书名/作者/主角名称搜索" maxlength="20" type="search" ng-model="searchVal">
+                <a class="icon_clear J-searchClear" ng-click="cancelSearchVal()"></a>
+            </div>
+            <span class="search_mybtn" id="J-searchBtn" ng-click="serachsubmit(searchVal);">搜索</span>
+        </form>
+    </div>
+    <div class="search_hotword" style="background: #fff" ng-show="hideDiv">
+        <div class="search_line clearfix">
+            <span>大家都在搜：</span>
+            <!--<em class="search_do do_refresh"></em>-->
+        </div>
+        <div class="search_list">
+            <a ng-repeat="ser in hotserachList" ng-bind="ser.wd" ng-click="serachsubmit(ser.wd);"></a>
+        </div>
+    </div>
+</section>
+
+<!-- 搜索列表 -->
+<section class="category_detail_box column_index" id="J-search-List" ng-hide="hideDiv" style="background-color: #fff;">
+    <div class="search_title" id="search-list-title">搜索“{{searchVal}}”共{{serachList.total}}条结果</div>
+    <div class="col_warp" id="J-searchItems">
+    	<div class="col_warp" id="J-categoryDetail" >
+			<div class="col_item" ng-repeat="bk in serachList.list" ui-sref="bookdetail({bookId:bk.bookId})">
+				<a> <img ng-src="{{bk.bookCover}}" alt="{{bk.bookName}}" class="book_cover fl mgr20">
+					<div class="book_info">
+						<p class="book_name" ng-bind="bk.bookName"></p>
+						<p class="book_intro mgt10" ng-bind="bk.introduction"></p>
+						<p class="book_author mgt20">
+							<img ng-src="{{bk.book_category=='F'?'image/auth.png':'image/auth.png'}}" alt="" class="avatar_img fl mgr10">{{bk.author}}<span class="book_category mgl20" ng-bind="bk.bookClass"></span>
+						</p>
+					</div>
+				</a>
+			</div>
+		</div>
+    </div>
+</section>
+<section class="category_detail_box column_index" style="background: #fff" ng-show="hideDiv">
+	<div class="search_title">精彩推荐</div>
+	<div class="col_warp" id="J-categoryDetail">
+		<div class="col_warp" id="J-categoryDetail" >
+			<div class="col_item" ng-repeat="bk in recommendList" ui-sref="bookdetail({bookId:bk.bookId})">
+				<a> <img ng-src="{{bk.bookCover}}" alt="{{bk.bookName}}" class="book_cover fl mgr20">
+					<div class="book_info">
+						<p class="book_name" ng-bind="bk.bookName"></p>
+						<p class="book_intro mgt10" ng-bind="bk.introduction"></p>
+						<p class="book_author mgt20">
+							<img ng-src="image/auth.png" alt="" class="avatar_img fl mgr10">{{bk.author}}<span class="book_category mgl20" ng-bind="bk.bookClass"></span>
+						</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div  class="loadingImgBottom" ng-show="loadingSmall">
+        <img src="image/loading.png" alt="">
+        <span>加载中</span>
+    </div>
+</section>
+<section class="category_detail_box column_index" style="background: #fff;padding-top: 0.3rem;" ng-hide="hideDiv" >
+    <div class="search_title">好书推荐</div>
+    <div class="col_warp" id="J-categoryDetail">
+        <div class="col_warp" id="J-categoryDetail" >
+            <div class="col_item" ng-repeat="bk in goodBookList" ui-sref="bookdetail({bookId:bk.bookId})">
+                <a> <img ng-src="{{bk.bookCover}}" alt="{{bk.bookName}}" class="book_cover fl mgr20">
+                    <div class="book_info">
+                        <p class="book_name" ng-bind="bk.bookName"></p>
+                        <p class="book_intro mgt10" ng-bind="bk.introduction"></p>
+                        <p class="book_author mgt20">
+                            <img ng-src="image/auth.png" alt="" class="avatar_img fl mgr10">{{bk.author}}<span class="book_category mgl20" ng-bind="bk.bookClass"></span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div  class="loadingImgBottom" ng-show="loadingSmall">
+        <img src="image/loading.png" alt="">
+        <span>加载中</span>
+    </div>
+</section>
+<div ng-show="loading" class="loadingImg">
+    <img src="image/loading.png" alt="">
+</div>
+<p class="yq_tips_box" ng-show="isTipContent"><span ng-bind="tipContent"></span></p>

@@ -1,0 +1,137 @@
+<header class="header_bar">
+    <div class="header_warp">
+        <a class="goback_btn fl" ng-click="detailBack()">
+            <img src="image/back.png" alt="">
+            <span>返回</span>
+        </a>
+        <div class="page_title">作品详情</div>
+        <a class="search_btn fr" ui-sref="serach">搜索</a>
+    </div>
+</header>
+<div style="height:1.17333333rem;"></div>
+<!--<div app-headbar text="作品详情"></div>-->
+<div class="book_detail_book">
+    <section class="book_detail">
+        <div class="book_info">
+            <div class="content">
+                <div class="clearfix bordb">
+                    <img ng-src="{{bookDetail.bookCover}}" alt="{{bookDetail.bookName}}" class="book_info_img">
+                    <div class="book_info_fr clearfix">
+                        <p class="book_title" ng-bind="bookDetail.bookName"></p>
+                        <p class="book_author mgt10"><a ui-sref="author({author:bookDetail.author})" ng-bind="bookDetail.author"></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a ui-sref="listsame({classCode:bookDetail.bookClassCode,bookClass:bookDetail.bookClass})" class="grany" ng-bind="bookDetail.bookClass"></a></p>
+                        <p class="mgt10"><em>字数：{{bookDetail.wordNum}}字</em></p>
+                        <!-- 完结篇 book_status 后面增加样式： isend  文案：已完结 -->
+                        <p class="mgt10"><em class="book_status isend" ng-bind="bookDetail.bookStatus"></em></p>
+                        <div class="book_message mgt50">
+                            <span><i class="book_like"></i>{{bookDetail.concernNum}}</span>
+                            <span><i class="book_comment"></i>{{bookDetail.comment}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="book_tab_content">
+        <!-- 简介 -->
+        <section class="book_desc bgwhite">
+            <div class="content">
+                <h3 >作品简介：</h3>
+                <p class="desc_content mgt20" ng-bind="bookDetail.introduction"></p>
+            </div>
+        </section>
+
+        <div class="col mgt20">
+            <div class="col_warp hasgo color" style="color:rgb(86,86,86);" ui-sref="directory({bookId:bookDetail.bookId})"> 
+                <a>目录</a>
+            </div>
+        </div>
+    	<!-- 他们还喜欢 -->
+    </div>
+
+    <!-- 更新状态 end -->
+    <div class="btns on mgt20">
+        <a class="btn btn_freeread fl" ng-bind="bookDetail.readFlag==='1'?'开始阅读':'继续阅读'" ng-click="isread()"></a>
+        <!-- 已订阅添加样式：faved 文案：取消收藏-->
+
+        <a id="collection" class="btn btn_addtoBookrack fr {{bookDetail.concernFlag==='1'?'faved':''}}"  data-bookid="427" ng-bind="bookDetail.concernFlag==='1'?'已收藏':'收藏'" ng-click="cancelCollection(bookDetail)"></a>
+    </div>
+    <div class="dialog" ng-show="cancel">
+        <div class="dialog_mask"></div>
+        <div class="dialog_confirm">
+            <div class="dialog_tip">
+                <div class="dialog_title">您确定要取消收藏吗？</div>
+                <div class="dialog_text">取消收藏后，阅读进度会被清空，确定取消？</div>
+            </div>
+            <div class="dialog_btn box">
+                <span class="dialog_yes flex-1" ng-click="cancelY()">确定</span>
+                <span class="dialog_no flex-1" ng-click="cancelN()">暂不取消</span>
+            </div>
+        </div>
+    </div>
+    <section class="container mgt20">
+        <div class="comment">
+            <div class="comment_div clearfix">
+                <div class="book_comment fl">书评 <span>({{commentList.total}})</span></div>
+                <div class="write_comment fr" ng-click="iscomment()"><i class="write_comment_icon"></i><span >写评论</span></div>
+            </div>
+            <ul class="comment_ul">
+                <li class="clearfix mgt20" ng-repeat="comment in commentList.list" id="zanIndex">
+                    <div class="comment_photo fl">
+                        <!-- <img ng-src="{{comment.imgUrl}}" alt=""> -->
+                        <img ng-src="{{(comment.imgUrl==null||comment.imgUrl=='')?'image/headnew.png':comment.imgUrl}}" alt="" style="border:1px solid #bfbfbf;">
+                    </div>
+                    <div class="comment_detail fr">
+                        <div class="comment_nick clearfix">
+                            <span class="comment_nickName fl" ng-bind="comment.userName"></span>
+                            <div class="comment_zan fr" ng-click="zan(comment,$index)">
+                                <span class="comment_zanNumber" ng-bind="comment.likeNum"></span>
+                                <span class="comment_zanIcon {{comment.likeFlag?'zanpng':''}}"></span>
+                            </div>
+                        </div>
+                        <div class="comment_time" ng-bind="comment.time"></div>
+                        <div class="comment_content pdtb20" ng-bind="comment.content"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div  class="seeMoreCommentLoad jlBottom" ng-show="seeMoreComment">
+            <span ng-click="loadMoreRecomment()">查看更多评论</span>
+        </div>
+        <!--  -->
+        <div  class="seeMoreCommentOver jlBottom" ng-show="CommentOver">
+            <span ng-click="iscomment()">加载完啦，请君留下你的足迹吧！</span>
+        </div>
+        <div class="" style="height:2rem" ng-show="loadingSmall"></div>
+        <!--  -->
+    </section>
+</div>
+
+<section class="category_detail_box column_index" style="background: #fff;padding-top: 0.4rem;" ng-hide="hideDiv">
+    <div class="search_title">好书推荐</div>
+    <div class="col_warp" id="J-categoryDetail">
+        <div class="col_warp" id="J-categoryDetail" >
+            <div class="col_item" ng-repeat="bk in goodBookList" ui-sref="bookdetail({bookId:bk.bookId})">
+                <a> <img ng-src="{{bk.bookCover}}" alt="{{bk.bookName}}" class="book_cover fl mgr20">
+                    <div class="book_info">
+                        <p class="book_name" ng-bind="bk.bookName"></p>
+                        <p class="book_intro mgt10" ng-bind="bk.introduction"></p>
+                        <p class="book_author mgt20">
+                            <img ng-src="image/auth.png" alt="" class="avatar_img fl mgr10">{{bk.author}}<span class="book_category mgl20" ng-bind="bk.bookClass"></span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- <div  class="loadingImgBottom" ng-show="loadingSmall">
+        <img src="image/loading.png" alt="">
+        <span>加载中</span>
+    </div> -->
+</section>
+
+<div ng-show="loading" class="loadingImg">
+    <img src="image/loading.png" alt="">
+</div>
+<p class="yq_tips_box" ng-show="isTipContent"><span ng-bind="tipContent"></span></p>
+<div style="height:1.55rem"></div>

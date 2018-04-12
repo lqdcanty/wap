@@ -1,0 +1,15 @@
+<div app-headbar text="最近阅读"></div>
+<section class="recent-wrap" style="background-color:#fff">
+	<div class="recent-list">
+		<div class="recent-item" ng-repeat="book in recentRead">
+		    <a class="box">
+		        <div class="recent-left flex-1">
+			        <div class="recent-title ellipsis" ng-bind="book.bookName"></div>
+			        <div class="recent-chapter ellipsis">读至<span ui-sref="bookcontent({bookid:book.bookId,chapterid:''})" ng-bind="book.progress" ></span></div>
+			        <!--  <div class="recent-time"></div>-->
+		        </div>
+		        <div class="recent-right" ui-sref="bookcontent({bookid:book.bookId,chapterid:''})">继续阅读></div>
+		    </a>
+		</div>
+	</div>
+</section>

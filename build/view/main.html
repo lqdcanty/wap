@@ -1,0 +1,68 @@
+<div app-head></div>
+<div app-nav></div>
+<div app-banner slides="list"></div>
+<div app-toup></div>
+<!-- <div app-bjlt booklist="columns"></div> -->
+<!-- <div app-xsmf booklist="bookListxsmf" change="changepage2(columnId)"></div>
+<div app-cxjp booklist="bookListcxjp" change="changepage3(columnId)"></div> -->
+<section class="column_index bgwhite mgt20" ng-repeat="con in columns">
+    <div class="col_title">
+        <h3 class="fl"><i class="fl title_icon title_icon_bjlj" style="background-image: {{con.con.columnImg"}}"></i><span ng-bind="con.columnName"></span></h3>
+        <a ui-sref="columnsamelist({columnName:con.columnName,columnId:con.columnId})" ng-click="columnMore(con)" class="more_btn fr click">
+            <span class="newMore">更多</span>
+            <img src="image/more_n.png" alt="" class="newMoreImge">
+            <img src="image/more_p.png" alt="" class="newMoreImge newMoreImgeL">
+        </a>
+    </div>
+    <div class="col_warp">
+        <div class="col_item" ui-sref="bookdetail({bookId:book.bookId})" ng-click="column(book,con.columnName,$index)" ng-repeat="book in con.bookList">
+            <a>
+                <img ng-src="{{book.bookCover}}" alt="{{book.bookName}}" class="book_cover fl mgr20">
+                <div class="book_info">
+                    <p class="book_name" ng-bind="book.bookName"></p>
+                    <p class="book_intro mgt10" ng-bind="book.introduction"></p>
+                    <p class="book_author mgt20">
+						<img ng-src="{{book.book_category=='F'?'image/auth.png':'image/auth.png'}}" alt="" class="avatar_img fl mgr10">{{book.author}}<span class="book_category mgl20" ng-bind="book.bookClass"></span>
+					</p>
+                </div> 
+            </a>
+        </div>
+    </div>
+    <div class="col_change J-changeBooks" ng-click="change(con,$index)">
+        <div class="abc {{$index==changeI&&changeC?'abcA':''}}">
+            <div class="change_text">换一批</div>
+            <img src="image/Shape-1.png" alt="" class="move">
+            <img src="image/Shape-2.png" alt="" class="move light">
+        </div>
+    </div>
+</section>
+<section class="recent_read" ng-click="isrecentread()">
+    <a>最近阅读</a>
+</section> 
+<div ng-show="loading" class="loadingImg">
+    <img src="image/loading.png" alt="">
+</div>
+<section class="tgbar_index mgt20 clearfix" ng-show="isAds">    
+    <a data-tj="3_11" ng-repeat="book in adsList" ng-click="bottonAds(book,$index)" class="tgbar_a">
+        <img ng-src="{{book.adCover}}" alt="{{book.bookName}}"  class="lazy">
+    </a>  
+</section>
+<div style="height:1.68rem"></div>
+<div app-recentread></div>
+<div app-foot></div>
+<p class="yq_tips_box" ng-show="isTipContent"><span ng-bind="tipContent"></span></p>
+<div app-oqtips></div>
+<div class="modle-wrap" ng-show="closeOqShow">
+    <div class="modle-container">
+        <div class="getOq">
+            <p class="getOqName" ng-show="flageShow">恭喜你获取</p>
+            <p class="getOqValue" ng-bind="oqValue"></p>
+            <button ng-click="sure()">确定</button>
+        </div>
+    </div>
+</div>
+<!-- 这一块都是指令 -->
+
+
+
+

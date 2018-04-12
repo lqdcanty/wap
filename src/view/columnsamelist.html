@@ -1,0 +1,17 @@
+<!--<div app-headbar text="{{textcolumnname}}"></div>-->
+<header class="header_bar">
+    <div class="header_warp">
+        <a class="goback_btn fl" ui-sref="main">
+        	<img src="image/back.png" alt="">
+    		<span>返回</span>
+        </a>
+        <div class="page_title">{{textcolumnname}}</div>
+        <a class="search_btn fr" href="#">搜索</a>
+    </div>
+</header>
+<div style="height:1.17333333rem;"></div>
+<div app-columnsamelist column="columnsameList"></div>
+<p class="yq_tips_box" ng-show="isTipContent"><span ng-bind="tipContent"></span></p>
+<div ng-show="loading" class="loadingImg">
+    <img src="image/loading.png" alt="">
+</div>

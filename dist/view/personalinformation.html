@@ -1,0 +1,96 @@
+<header class="header_bar">
+    <div class="header_warp">
+        <a class="goback_btn fl" ui-sref="my">
+            <img src="image/back.png" alt="">
+            <span>返回</span>
+        </a>
+        <div class="page_title">个人信息</div>
+    </div>
+</header>
+<div style="height:1.17333333rem;"></div>
+<section class="container mgt4">
+    <form action="" name="personForm">
+        <div class="col">
+            <div class="col_warp brd col_infoAvater">
+                <a href="javascript:;">头像
+                    <span class="fr">
+                        <img ng-src="{{imgUrl==='null'||imgUrl==undefined?'image/headnew.png':imgUrl}}" class="avater_info" alt="" ngf-resize="{width: 46, height: 46, quality: .8, type: 'image/*',
+ ratio: '1:2', centerCrop: true, pattern='*', restoreExif: false}" ngf-pattern="'image/*'" ngf-multiple="false" ngf-select="upload($file)">
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <!-- <form onsubmit="return false;" id="userNameForm" > -->
+                <div class="col_warp hasgo brd" ng-click="userName()">
+                    <!--修改信息：类型  修改名字-->
+                    <input name="userName" type="hidden" value="{{info.userName}}">
+                    <a id="userName" href="javascript:;">名字<span class="col_right" ng-bind="userNameS?userNameS:info.userName"></span></a>
+                </div>
+           <!--  </form> -->
+        </div>
+        <div class="col">
+            <div class="col_warp brd">
+                <a href="javascript:;">元气号<span class="col_right" ng-bind="info.userCode"></span></a>
+            </div>
+        </div>
+        <div class="col mgt20">
+            <div class="col_warp hasgo brd" ng-click="genderClick()">
+                <!-- <form onsubmit="return false;" id="genderForm"> -->
+                    <!--修改信息：类型  修改性别-->
+                   <!--  <input type="hidden" name="changeType" value="gender" />
+                   <input type="hidden" name="newGender" value="" id="newGender" /> -->
+                    <input name="_csrf" type="hidden" id="_csrf" value="info.gender">
+                    <a id="gender">性别<span class="col_right" ng-bind="sexWord?sexWord:info.gender"></span></a>
+                
+                <!-- </form> -->
+            </div>
+        </div>
+        <div class="col">  
+           <!--  <form onsubmit="return false;" id="signatureForm"> -->
+                <div class="col_warp hasgo" ng-click="signClick()">
+                    <!--修改信息：类型  修改个性签名-->
+                    <!-- <input type="hidden" name="changeType" value="signature" />
+                    <input type="hidden" name="newSignature" value="" id="newSignature" /> -->
+                    <input name="_csrf" type="hidden" id="_csrf" value="info.signature">
+                    <a id="signature" href="javascript:;">个性签名<span class="col_right" ng-bind="signText?signText:info.signature"></span></a>
+
+                </div>
+            <!-- </form> -->
+        </div>
+    </form>
+
+   <!--修改昵称弹窗-->
+    <div class="uc_popup J-nikeNameChang" ng-show="isName">
+        <div class="popup_close" ng-click="clickCloss()">关闭</div>
+        <div class="uc_int_box mgt50">
+            <input class="uc_int" type="text" id="changeVal" ng-model="userNameS"  placeholder=""/>
+        </div>
+        <div class="popup_btn mgt50">
+            <input type="button" id="saveBtn" ng-click="userNamedetermine()" class="btn btn_red" value="确认"/>
+        </div>
+    </div>
+    <!--修改签名弹窗-->
+    <div class="uc_popup J-sigerChang" ng-show="isSign">
+        <div class="popup_close" ng-click="clickCloss()">关闭</div>
+        <div class="uc_int_box mgt50">
+            <input class="uc_int" type="text" ng-model="signText"  id="changeVal" placeholder="输入签名"/>
+        </div>
+        <div class="popup_btn mgt50">
+            <input type="button" id="saveBtn" ng-click="signdetermine()" class="btn btn_red" value="确认"/>
+        </div>
+    </div>
+    <!--选择性别弹窗-->
+    <ul class="gender_list" ng-show="isSex">
+        <li class="gender_one nan" ng-click="nan()" ng-model="sexWord">男</li>
+        <li class="gender_one nv" ng-click="nv()" ng-model="sexWord">女</li>
+    </ul>
+    <!--背景遮盖层-->
+    <div class="popup_bg" ng-show="isSex||isSign||isName"></div>
+</section>
+<p class="yq_tips_box" ng-show="isTipContent"><span ng-bind="tipContent"></span></p>
+<!--[content end]-->
+<p class="yq_tips_box" ng-show="isTipContent"><span ng-bind="tipContent"></span></p>
+<div ng-show="loading" class="loadingImg">
+    <img src="image/loading.png" alt="">
+</div>

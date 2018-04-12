@@ -1,0 +1,10 @@
+{
+  "name": "messages",
+  "version": "0.1.0",
+  "main": "messages.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}

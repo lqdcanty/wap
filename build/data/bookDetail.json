@@ -1,0 +1,18 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+    "data":{
+        "bookId":1,
+        "bookName":"继承者的千万新娘",
+        "author":"作者",
+        "bookClass":"都是青春",
+        "wordNum":"10291020",
+        "bookStatus":"已完结",
+        "bookCover":"image/b89396b4c2b.jpg",
+        "concernNum":7948,
+        "comment":8948,
+        "introduction":"作品简介",
+        "concernFlag":"1"
+    }
+}

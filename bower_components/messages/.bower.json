@@ -1,0 +1,21 @@
+{
+  "name": "messages",
+  "version": "0.1.0",
+  "main": "messages.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "homepage": "https://github.com/kjbekkelund/messages",
+  "_release": "0.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.0",
+    "commit": "830abf68c7d952682690242b2e06702a061744b0"
+  },
+  "_source": "https://github.com/kjbekkelund/messages.git",
+  "_target": "^0.1.0",
+  "_originalSource": "messages",
+  "_direct": true
+}

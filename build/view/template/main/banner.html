@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="swiper-container" id="banner">
+        <div class="swiper-wrapper">
+	        <div class="swiper-slide" ng-repeat="result in slides">
+	        	<a ng-click="bannerClick(result,$index);">
+                <!-- <a ui-sref="activecome"> -->
+		       		<img ng-src="{{result.bannerCover}}" />
+		        </a>
+	        </div>  
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+

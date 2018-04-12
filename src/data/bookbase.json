@@ -1,0 +1,62 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+    "data":{
+            "pageNum":1,
+            "pageSize":3,
+            "total":6,
+            "list":[
+               {
+                    "bookId":1,
+                    "bookName":"言情小说的名字可能长，预留一行，超过隐藏",
+                    "introduction":"小说简介,最长可以设置两行",
+                    "bookCover":"image/9fac924797a.jpg",
+                    "author":"作者",
+                    "bookClass":"都市青春"
+                },{
+                    "bookId":1,
+                    "bookName":"言情小说的名字可能长，预留一行，超过隐藏",
+                    "introduction":"小说简介,最长可以设置两行",
+                    "bookCover":"image/c9bad91e2d9.jpg",
+                    "author":"作者",
+                    "bookClass":"都市青春"
+                },{
+                    "bookId":1,
+                    "bookName":"言情小说的名字可能长，预留一行，超过隐藏",
+                    "introduction":"小说简介,最长可以设置两行",
+                    "bookCover":"image/c92fec282d5.jpg",
+                    "author":"作者",
+                    "bookClass":"都市青春"
+                },{
+                    "bookId":1,
+                    "bookName":"言情小说的名字可能长，预留一行，超过隐藏",
+                    "introduction":"小说简介,最长可以设置两行",
+                    "bookCover":"image/383436d3c58.jpg",
+                    "author":"作者",
+                    "bookClass":"都市青春"
+                },{
+                    "bookId":1,
+                    "bookName":"言情小说的名字可能长，预留一行，超过隐藏",
+                    "introduction":"小说简介,最长可以设置两行",
+                    "bookCover":"image/76899fcdad5.jpg",
+                    "author":"作者",
+                    "bookClass":"都市青春"
+                },{
+                    "bookId":1,
+                    "bookName":"言情小说的名字可能长，预留一行，超过隐藏",
+                    "introduction":"小说简介,最长可以设置两行",
+                    "bookCover":"image/383436d3c58.jpg",
+                    "author":"作者",
+                    "bookClass":"都市青春"
+                },{
+                    "bookId":1,
+                    "bookName":"言情小说的名字可能长，预留一行，超过隐藏",
+                    "introduction":"小说简介,最长可以设置两行",
+                    "bookCover":"image/76899fcdad5.jpg",
+                    "author":"作者",
+                    "bookClass":"都市青春"
+                }
+            ]
+        }
+}

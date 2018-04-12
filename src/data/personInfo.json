@@ -1,0 +1,13 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+    "data":{
+            "userId":1,
+            "userName":"名字",
+            "userCode":"YQ123",
+            "signature":"个性签名",
+            "gender":"male"
+        }
+    
+}

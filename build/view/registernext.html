@@ -1,0 +1,32 @@
+ <div app-headbar text="新用户注册"></div>
+ <div style="height:1.17333333rem;"></div>
+<section class="container" >
+    <div class="reg_box">
+        <div class="reg_tips reg_big_tips mgt20"></div>
+        <div class="reg_items">
+            <form action="post" name="form">
+                <div class="reg_item mgt30 clearfix">
+                    <span class="reg_name rec_icons uc_code">&nbsp;</span>
+                    <div class="reg_text messagedx p-r">
+                        <input type="text" validator="required" ng-model="user.authCode" placeholder="请输入验证码" class="reg_int"/>
+                        <span type="button" class="send_code {{time?'disabled':''}}" ng-click="time?1==1:send();" ng-bind="time?time:'发送短信'"></span>
+                    </div>
+                </div>
+                <div class="reg_item mgt30 clearfix">
+                    <span class="reg_name rec_icons uc_pwd">&nbsp;</span>
+                    <div class="reg_text">
+                        <input type="password" name="pwd" ng-model="user.pwd" validator="required,pwd" placeholder="请设置密码，6-20位" class="reg_int"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="login_btn_box mgt10">
+            <a href="javascript:;" id="thisBtn" class="btn btn_green green" validation-submit="form" ng-click="submit()">下一步</a>
+        </div>
+        
+    </div>
+</section>
+<div ng-show="loading" class="loadingImg">
+    <img src="image/loading.png" alt="">
+</div>
+<p class="yq_tips_box" ng-show="isTipContent"><span ng-bind="tipContent"></span></p>

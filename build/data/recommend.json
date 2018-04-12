@@ -1,0 +1,40 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+    "data":[
+        {
+            "bookId":1,
+            "bookName":"言情小说的名字可能长，预留一行，超过隐藏。。。",
+            "bookCover":"image/76899fcdad5.jpg",
+            "introduction":"小说简介,最长可以设置两行",
+            "author":"作者",
+            "bookClass":"小说分类",
+            "imgUrl":"image/auth.png"
+        },{
+            "bookId":1,
+            "bookName":"言情小说的名字可能长，预留一行，超过隐藏。。。",
+            "bookCover":"image/76899fcdad5.jpg",
+            "introduction":"小说简介,最长可以设置两行",
+            "author":"作者",
+            "bookClass":"小说分类",
+            "imgUrl":"image/auth.png"
+        },{
+            "bookId":1,
+            "bookName":"言情小说的名字可能长，预留一行，超过隐藏。。。",
+            "bookCover":"image/76899fcdad5.jpg",
+            "introduction":"小说简介,最长可以设置两行",
+            "author":"作者",
+            "bookClass":"小说分类",
+            "imgUrl":"image/auth.png"
+        },{
+            "bookId":1,
+            "bookName":"言情小说的名字可能长，预留一行，超过隐藏。。。",
+            "bookCover":"image/76899fcdad5.jpg",
+            "introduction":"小说简介,最长可以设置两行",
+            "author":"作者",
+            "bookClass":"小说分类",
+            "imgUrl":"image/auth.png"
+        }
+    ]
+}

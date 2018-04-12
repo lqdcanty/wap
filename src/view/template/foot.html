@@ -1,0 +1,14 @@
+<div class="yw_tabbar">
+    <a ui-sref="main" class="yw_tabbar_item" ui-sref-active="cur" ng-class="{cur:state.includes('class')||state.includes('bookbase')||state.includes('rank')}">
+        <div class="yw_tabbar_icon yw_tabbar_icon_booklibs"></div>
+        <p class="yw_tabbar_label">书城</p>
+    </a>
+    <a class="yw_tabbar_item" ng-class="{cur:state.includes('bookstore')}" ng-click="bookstoreLogin()">
+        <div class="yw_tabbar_icon yw_tabbar_icon_mybooks"></div>
+        <p class="yw_tabbar_label">书架</p>
+    </a>
+    <a ui-sref-active="cur" ng-class="{cur:state.includes('my')}" class="yw_tabbar_item" ng-click="myLogin()">
+        <div class="yw_tabbar_icon yw_tabbar_icon_user"></div>
+        <p class="yw_tabbar_label">我的</p>
+    </a>
+</div>

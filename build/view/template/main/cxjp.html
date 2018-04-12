@@ -1,0 +1,25 @@
+<section class="column_index bgwhite mgt20">
+    <div class="col_title">
+        <h3 class="fl"><i class="fl title_icon title_icon_zjlz"></i>男生专区</h3>
+        <a ui-sref="columnsamelist({id:booklist.columnId,columnName:booklist.columnName})" class="more_btn fr">更多</a>
+    </div>
+    <div class="col_warp" id="J-booksIndex_zjlz"> 
+        <div class="col_item" ui-sref="bookdetail({id:book.bookId})" ng-repeat="book in booklist.bookList">
+            <a data-tj="1_6">
+                <img ng-src="{{book.bookCover}}" alt="{{book.bookName}}" class="lazy book_cover fl mgr20">
+
+                <div class="book_info">
+                    <p class="book_name" ng-bind="book.bookName">婚前试爱：坏坏老公太霸道</p>
+                    <p class="book_intro mgt10" ng-bind="book.introduction"></p>
+                    <p class="book_author mgt20">
+                        <span class="book_favorite">关注度</span><span ng-bind="book.concern"></span>
+                       <span class="book_see">浏览数</span><span ng-bind="book.reading">7890</span>
+                    </p>
+                </div>
+            </a>
+        </div> 
+    </div>
+    <div class="col_change J-changeBooks" ng-click="change(booklist)">
+        <div class="change_text">换一批</div>
+    </div>
+</section>

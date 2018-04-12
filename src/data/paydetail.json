@@ -1,0 +1,20 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+    "data":[
+        {
+            "type":"阅读消费",
+            "time":"2017-09-05",
+            "balance":12,
+            "change":-18
+        },
+        {
+            "type":"充值",
+            "time":"2017-09-05",
+            "balance":30,
+            "change":30
+        }
+    ]
+} 
+

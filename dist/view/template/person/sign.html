@@ -1,0 +1,175 @@
+<div>
+	
+	<section class="container checkin_box">
+		<div class="checkin_header mgt30">
+			<span class="fl">hi，</span> <a ui-sref="signgz" class="fr view_rule_btn">签到规则</a>
+		</div>
+		<!-- 签到日历 -->
+		<div class="calendar_box mgt30" id="J-calendar_box">
+			<div class="year_m" id="J-yearMonth"></div>
+			<table class="data_table" id="J-data_table">
+				<thead class="week_area">
+					<tr>
+						<td>星期一</td>
+						<td>星期二</td>
+						<td>星期三</td>
+						<td>星期四</td>
+						<td>星期五</td>
+						<td>星期六</td>
+						<td>星期日</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="7" class="lineSpan"></td>
+					</tr>
+				</tbody>
+				<tbody class="day_area" id="J-daysArea">
+					<tr>
+						<!-- <td class="selected"><span>1</span></td> -->
+						<!-- <td class="selected_today"><span>2</span></td> -->
+
+					</tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class=""><span data-dateline="2017-07-01" data-signed="0"
+						data-allowsigne="1">1</span></td>
+					<td class=""><span data-dateline="2017-07-02" data-signed="0"
+						data-allowsigne="1">2</span></td>
+					</tr>
+					<tr>
+						<td class=""><span data-dateline="2017-07-03" data-signed="0"
+							data-allowsigne="1">3</span></td>
+						<td class=""><span data-dateline="2017-07-04" data-signed="0"
+							data-allowsigne="1">4</span></td>
+						<td class=""><span data-dateline="2017-07-05" data-signed="0"
+							data-allowsigne="1">5</span></td>
+						<td class=""><span data-dateline="2017-07-06" data-signed="0"
+							data-allowsigne="1">6</span></td>
+						<td class=""><span data-dateline="2017-07-07" data-signed="0"
+							data-allowsigne="1">7</span></td>
+						<td class=""><span data-dateline="2017-07-08" data-signed="0"
+							data-allowsigne="1">8</span></td>
+						<td class=""><span data-dateline="2017-07-09" data-signed="0"
+							data-allowsigne="1">9</span></td>
+					</tr>
+					<tr>
+						<td class=""><span data-dateline="2017-07-10" data-signed="0"
+							data-allowsigne="1">10</span></td>
+						<td class=""><span data-dateline="2017-07-11" data-signed="0"
+							data-allowsigne="1">11</span></td>
+						<td class=""><span data-dateline="2017-07-12" data-signed="0"
+							data-allowsigne="1">12</span></td>
+						<td class=""><span data-dateline="2017-07-13" data-signed="0"
+							data-allowsigne="1">13</span></td>
+						<td class=" selected_today"><span data-dateline="2017-07-14"
+							data-signed="0" data-allowsigne="0">14</span></td>
+						<td class="notselected"><span data-dateline="2017-07-15"
+							data-signed="0" data-allowsigne="0">15</span></td>
+						<td class="notselected"><span data-dateline="2017-07-16"
+							data-signed="0" data-allowsigne="0">16</span></td>
+					</tr>
+					<tr>
+						<td class="notselected"><span data-dateline="2017-07-17"
+							data-signed="0" data-allowsigne="0">17</span></td>
+						<td class="notselected"><span data-dateline="2017-07-18"
+							data-signed="0" data-allowsigne="0">18</span></td>
+						<td class="notselected"><span data-dateline="2017-07-19"
+							data-signed="0" data-allowsigne="0">19</span></td>
+						<td class="notselected"><span data-dateline="2017-07-20"
+							data-signed="0" data-allowsigne="0">20</span></td>
+						<td class="notselected"><span data-dateline="2017-07-21"
+							data-signed="0" data-allowsigne="0">21</span></td>
+						<td class="notselected"><span data-dateline="2017-07-22"
+							data-signed="0" data-allowsigne="0">22</span></td>
+						<td class="notselected"><span data-dateline="2017-07-23"
+							data-signed="0" data-allowsigne="0">23</span></td>
+					</tr>
+					<tr>
+						<td class="notselected"><span data-dateline="2017-07-24"
+							data-signed="0" data-allowsigne="0">24</span></td>
+						<td class="notselected"><span data-dateline="2017-07-25"
+							data-signed="0" data-allowsigne="0">25</span></td>
+						<td class="notselected"><span data-dateline="2017-07-26"
+							data-signed="0" data-allowsigne="0">26</span></td>
+						<td class="notselected"><span data-dateline="2017-07-27"
+							data-signed="0" data-allowsigne="0">27</span></td>
+						<td class="notselected"><span data-dateline="2017-07-28"
+							data-signed="0" data-allowsigne="0">28</span></td>
+						<td class="notselected"><span data-dateline="2017-07-29"
+							data-signed="0" data-allowsigne="0">29</span></td>
+						<td class="notselected"><span data-dateline="2017-07-30"
+							data-signed="0" data-allowsigne="0">30</span></td>
+					</tr>
+					<tr>
+						<td class="notselected"><span data-dateline="2017-07-31"
+							data-signed="0" data-allowsigne="0">31</span></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="checkin_note mgt30 J-checkinNote">
+			每天签到可领<em>10</em>粮票，连续签满领取奖励<br> 你本月已累计获得<em
+				class="J-liangpiaoTotal">0</em>粮票
+		</div>
+		<div class="checkin_do_area mgt40 text_center">
+			<!-- 已签过增加样式：disabled -->
+			<a href="javascript:;" class="checkin_btn">签到领奖励</a> 
+		</div>
+		<!-- <div class="checkin_gifts J-checkin_gifts">
+			<ul>
+				有补签卡奖励 增加样式：hasThreeItems 已领取奖励，增加样式：geted
+				<li class="checkin_gift_item hasThreeItems">
+					<p class="title">满10天</p>
+					<p class="note">100粮票</p>
+					<p class="note">补签卡x1</p>
+				</li>
+				<li class="checkin_gift_item hasThreeItems">
+					<p class="title">满20天</p>
+					<p class="note">300粮票</p>
+					<p class="note">补签卡x1</p>
+				</li>
+				<li class="checkin_gift_item hasThreeItems">
+					<p class="title">满28天</p>
+					<p class="note">500粮票</p>
+					<p class="note">补签卡x2</p>
+				</li>
+			</ul>
+		</div> -->
+	</section>
+	<!-- 弹出层 -->
+	<section class="g-maskDiv J-maskBox"></section>
+	<!-- 签到成功 -->
+	<section class="checkin_ok_box J-checkSuccess">
+		<p class="title">获得10粮票</p>
+		<p class="note">再签3天可领取奖励</p>
+		<a href="javascript:;" class="close_btn J-checkSuccessClose">关闭</a>
+	</section>
+	<!-- 补签结果提示 -->
+	<section class="checkin_tips J-checkinTips">
+		<p class="J-tipsContent">
+			2月18日补签成功！<br> 获得10粮票 获得10粮票,并获得一个奖励
+		</p>
+	</section>
+	<section class="checkin_retroactive_cards J-retroactiveCardBox">
+		<a href="javascript:;"
+			class="checkin_retroactive_cards_close_btn J-retroactiveCardBoxClose">关闭</a>
+		<div class="retroactive_card">
+			补签卡<em><num>0</num>张</em>
+		</div>
+		<p class="note">补签为当月最近一个未签日</p>
+		<div class="btns">
+			<a href="javascript:;" class="btn_ok fl J-doRetroactive">使用</a> <a
+				href="javascript:;" class="btn_cal fr J-retroactiveCardBoxClose">取消</a>
+		</div>
+	</section> 
+</div>

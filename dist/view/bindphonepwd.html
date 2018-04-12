@@ -1,0 +1,31 @@
+<div app-headbar text="手机绑定"></div>
+<!-- <div app-setnewpassword></div> -->
+<div style="height:1.17333333rem;"></div>
+<section class="container">
+    <div class="reg_box">
+        <div class="reg_items">
+            <form action="" name="bindPhonePwdForm" onsubmit="return false;">
+            <input name="_csrf" type="hidden" id="_csrf">
+                <div class="reg_item mgt30 clearfix">
+                    <span class="reg_name rec_icons uc_pwd">&nbsp;</span>
+                    <div class="reg_text">
+                        <input type="password" name="newPwd" ng-model="user.newPwd" validator="required,newPwd" placeholder="输入密码,6-20位" maxlength="20" class="reg_int"/>
+                    </div>
+                </div>
+                <div class="reg_item mgt30 clearfix">
+                    <span class="reg_name rec_icons uc_pwd">&nbsp;</span>
+                    <div class="reg_text">
+                        <input type="password" name="confirmPwd" ng-model="user.confirmPwd" validator="required,confirmPwd" placeholder="确认密码" class="reg_int"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="login_btn_box mgt10">
+            <a href="javascript:;" id="thisBtn" class="btn btn_green green" validation-submit='bindPhonePwdForm' ng-click='submit();'>完成</a>
+        </div>
+    </div>
+</section>
+<div ng-show="loading" class="loadingImg">
+    <img src="image/loading.png" alt="">
+</div>
+<p class="yq_tips_box" ng-show="isTipContent"><span ng-bind="tipContent"></span></p>

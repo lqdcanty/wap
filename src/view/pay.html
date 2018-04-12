@@ -1,0 +1,100 @@
+<!-- <div app-headbar text=""></div> -->
+<header class="header_bar">
+    <div class="header_warp">
+        <a class="goback_btn fl" ng-click="backPay();">
+            <img src="image/back.png" alt="">
+            <span>返回</span>
+        </a>
+        <div class="page_title">充值</div>
+    </div>
+</header>
+<div style="height:1.17333333rem;"></div>
+<div>
+    <section class="recharge_header">
+        <div class="fl b_num">
+            <p class="num">当前元气</p>
+            <p class="yue" ng-bind="balanceNub"></p>
+        </div>
+        <div class="fr" ui-sref="paydetail">
+            <a href="#" class="btn recharge_list_btn">
+                <span>明细</span>
+                <img src="image/arrow1.png">
+            </a>
+        </div>
+    </section>
+    <section class="recharge_main mgt50">
+        <form id="J-frmRecharge" action="" method="post">
+            <h3>点击充值<span class="colb8272d">(1元=100元气)</span>：</h3>
+            <input name="_csrf" type="hidden" id="_csrf"
+                   value="WTROTHNtWEQ7QC05GCIxDTp4Hg4dJz4jDUcDKBYaLAkdUAo0PVlsBg==">
+            <div class="b_select_box mgt30">
+                <input type="hidden" name="coupon_id" id="coupon_id">
+                <input type="hidden" name="coupon_record_id" id="coupon_record_id" value="">
+
+                <ul class="J-denItems clearfix" id="payClass">
+                    <li class="hasThreeItems">
+                        <div class="tableCss">
+                            <p class="price"> 19.99元</p>
+                            <p class="p_other">共1999元气</p>
+                            <input type="hidden" value="1" class="productId"/>
+                        </div>
+                    </li>
+                    <li class="hasThreeItems cur">
+                        <div class="tableCss">
+                            <p class="price"> 30.00元</p>
+                            <p class="p_other">送600元气</p>
+                            <p class="p_other">共3600元气</p>
+                            <i class="recharge_hot"></i>
+                            <input type="hidden" value="2" class="productId"  id="defaultId"/>
+                        </div>
+                    </li>
+                    <li class="hasThreeItems">
+                        <div class="tableCss">
+                            <p class="price"> 50.00元</p>
+                            <p class="p_other">送1000元气</p>
+                            <p class="p_other">共6000元气</p>
+                            <input type="hidden" value="3" class="productId"/>
+                        </div>
+                    </li>
+                    <li class="hasThreeItems">
+                        <div class="tableCss">
+                            <p class="price">80.00元</p>
+                            <p class="p_other">送1600元气</p>
+                            <p class="p_other">共9600元气</p>
+                            <input type="hidden" value="4" class="productId"/>
+                        </div>
+                    </li>
+                    <li class="hasThreeItems ">
+                        <div class="tableCss">
+                            <p class="price">100.00元</p>
+                            <p class="p_other">送2500元气</p>
+                            <p class="p_other">共12500元气</p>
+                            <input type="hidden" value="5" class="productId"/>
+                        </div>
+                    </li>
+                    <li class="hasThreeItems ">
+                        <div class="tableCss">
+                            <p class="price">150.00元</p>
+                            <p class="p_other">送3750元气</p>
+                            <p class="p_other">共18750元气</p>
+                            <input type="hidden" value="6" class="productId"/>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <input type="hidden" name="cfgfoodid" value="0" id="J-rechargeNum" data-price="">
+
+            <!--v2.6.2 新增抵价券DOM start-->
+
+            <div class="col btns">
+                <input type="hidden" name="openid" value="" id="openid">
+                <a href="javascript:void(0);" class="btn bg-red" id="J-frmSubmit" ng-click="submit()">立即支付</a>
+            </div>
+        </form>
+    </section>
+
+</div>
+<div ng-show="loading" class="loadingImg">
+    <img src="image/loading.png" alt="">
+</div>
+<p class="yq_tips_box" ng-show="isTipContent"><span ng-bind="tipContent"></span></p>

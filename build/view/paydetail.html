@@ -1,0 +1,34 @@
+<!-- <div app-headbar text="收支明细"></div> -->
+<header class="header_bar">
+    <div class="header_warp">
+        <a class="goback_btn fl" ui-sref="pay">
+            <img src="image/back.png" alt="">
+            <span>返回</span>
+        </a>
+        <div class="page_title">收支明细</div>
+        <a class="search_btn fr" ui-sref="serach">搜索</a>
+    </div>
+</header>
+<div style="height:1.17333333rem;"></div>
+<section class="bookRack_list bg100">
+    <div class="nobook notoup" ng-show="ispayDetail">
+        <p class="nobook_p">暂无充值</p>
+    </div>
+    <div class="recode_list" id="J-recodeList" ng-hide="ispayDetail">
+        <div class="recode_item mgt20" ng-repeat="pay in payDetailList">
+            <p class="title">
+                <span class="fl" ng-bind="pay.type"></span>
+                <span class="fr money" ng-bind="pay.change"></span>
+            </p>
+            <p>
+                <span class="fl">余额：{{pay.balance}}元气</span>
+                <span class="fr time" ng-bind="pay.time"></span>
+            </p>
+        </div>
+    </div>
+</section>
+<div ng-show="loading" class="loadingImg">
+    <img src="image/loading.png" alt="">
+</div>
+<p class="yq_tips_box" ng-show="isTipContent"><span ng-bind="tipContent"></span></p>
+

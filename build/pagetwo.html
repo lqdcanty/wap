@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN" >
+<head>
+<meta charset="utf-8">
+<title>Document</title>
+<link rel="stylesheet" href="style/animate.min.css">
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing: -webkit-border-box;
+		box-sizing: border-box;
+	}
+	.activePageTwo{
+	  width: 100%;
+	  height:auto;
+	  overflow: hidden;
+	  font-size: 0;
+	}
+	.topImg{
+	  width: 100%;
+	  height: 16.41rem;
+	  background: url(image/background.png) no-repeat center center/cover;
+	  position: relative;
+	  overflow: hidden;
+	}
+	.topImg .yun1{
+		position: absolute;
+		top: 0.7rem;
+	    /* right: 11.34rem; */
+	    display:block;
+	    -webkit-animation:image1 10s infinite linear;
+	}
+	@-webkit-keyframes image1{
+	  0%{right: 10rem;}
+	  100%{right: -1.34rem;}
+	}
+	.topImg .yun2{
+		position: absolute;
+		top: 6.1rem;
+	    /* right: 11.34rem; */
+	    display:block;
+	    -webkit-animation:image8 10s infinite linear;
+	}
+	@-webkit-keyframes image8{
+	  0%{right: -1.34rem;}
+	  100%{right: 10rem;}
+	}
+	.topImg .wo{
+		position: absolute;
+		top: 3.46rem!important;
+	    /* right: 11.34rem; */
+	    display:block;
+	    width: 1rem;
+	    height: 1rem;
+	}
+	.word{
+		width: 100%;
+		position: absolute;
+		top: 2.9rem;
+		padding:0 0.5rem;
+	}
+	.word img{
+		 display: none;
+	}
+	#img1{
+		width: 2.13rem;
+		height: 3.067rem;
+	}
+	#img2{
+		width: 2.107rem;
+		height: 2.987rem;
+		margin-left: -0.1rem;
+		margin-right: 0.2rem;
+	}
+	#img3{
+		width: 2.107rem;
+		height: 2.987rem;
+		margin-right: 0.2rem;
+	}
+	#img4{
+		width: 2.267rem;
+		height: 2.787rem;
+	}
+	#img5{
+		width: 1.56rem;
+		height: 1.76rem;
+		position: absolute;
+		left: 3.8rem;
+    	top: -1.3rem;
+	}
+	#img6{
+		width: 1.29rem;
+		height: 0.867rem;
+		position: absolute;
+		right: 0.3rem;
+    	top: -0.5rem;
+	}
+	.tuozi{
+		position: absolute;
+		width: 100%;
+		height: auto;
+		top: 7.5rem;
+		display: none;
+	}
+	.tuozi .tuziImg{
+		width:7.8rem;
+		position: absolute;
+		/* left: 1.25rem; */
+		-webkit-animation:tuzi 3s infinite linear;
+	}
+	.tuozi .yanjingBox{
+		position: absolute;
+		/* left: 2.9rem;
+		    	top: 3.0rem; */
+		display: inline-block;
+    	width: 1.8933rem;
+    	height: 0.4313rem;
+    	-webkit-animation:yanjing 3s infinite linear;
+	}
+	.tuozi .yanjingBox img{
+		width: 100%;
+		height: 100%;
+	}
+	@-webkit-keyframes tuzi{
+	  0%{left: 0.65rem;top:0;}
+	  20%{left: 1.15rem;top:-0.4rem;}
+	  35%{left: 1.55rem;top:0rem;}
+	  50%{left: 1.85rem;top:0.4rem;}
+	  65%{left: 1.55rem;top:0rem;}
+	  80%{left: 1.15rem;top:-0.4rem;}
+	  100%{left: 0.65rem;top:0rem;}
+	} 
+	@-webkit-keyframes yanjing{
+	  0%{left: 3.5rem;top:3rem;}
+	  20%{left: 4rem;top:2.6rem;}
+	  35%{left: 4.4rem;top:3rem;}
+	  50%{left: 4.7rem;top:3.4rem;}
+	  65%{left: 4.4rem;top:3rem;}
+	  80%{left: 4rem;top:2.6rem;}
+	  100%{left: 3.5rem;top:3rem;}
+	}
+	.activePageTwo .textDiv{
+		width: 100%;
+		height: auto;
+		padding: 0.3rem 1rem;
+		
+	}
+	.activePageTwo .textDiv .sameCss{
+		font-size: 0.4rem;
+		line-height:0.73rem;
+		color: #333; 
+	}
+	.activePageTwo .textZero .textDivTitle{
+		width: 100%;
+		padding: 0.15rem 0;
+		text-align: center;
+		font-style: oblique;
+		font-size: 0.45rem;
+		font-weight: 900;
+		border: 0.05rem dotted #333;
+		margin-bottom: 0.533rem;
+	}
+	.activePageTwo .sameCss .sameCssImg {
+		width: 100%;
+		text-align: center;
+		margin-top: 1rem;
+		margin-bottom: 0.5rem;
+	}
+	.activePageTwo .sameCss .sameCssImg img{
+		display: inline-block;
+		width: 1.53rem;
+		height: 1.813rem;
+	}
+	.activePageTwo .btnDiv{
+		padding: 0 1rem;
+		height: 7rem;
+	} 
+	.activePageTwo .btn1,.activePageTwo .btn2{
+		position: relative;
+	}
+	.activePageTwo .btnBg1{
+		width: 7.57rem;
+		height: 1.706rem;
+		background: url(image/di.png) no-repeat center center/cover;
+		margin-left: 0.4rem;
+	}
+	.activePageTwo .btnBg2{
+		width: 7.57rem;
+		height: 1.706rem;
+		background: url(image/du2.png) no-repeat center center/cover;
+		margin-left: 0.4rem;
+	}
+	.activePageTwo .btn1 .btnImg,.activePageTwo .btn2 .btnImg{
+		width: 7.57rem;
+		height: 1.706rem;
+		position: absolute;
+		left: 0;
+		top: -0.2rem; 
+	}
+	.activePageTwo .btn1{
+		margin-top: 1.2rem;
+		margin-bottom: 1.6rem;
+	}
+	.btn1 .btnLuobo1,.btn2 .btnLuobo1{
+		width: 1.493rem;
+	    height: 1.586rem;
+	    position: absolute;
+	    right: 0.28rem;
+	    top: 0.4rem;
+	}
+	.showText{
+		display: none;
+	}
+</style>
+</head>
+<body>
+<section class="activePageTwo">
+	<div class="topImg">
+		<img class="yun1" src="image/yun1.png" alt="" />
+		<div class="word">
+			<img src="image/wo.png" id="img1" class="" alt="" />
+			<img src="image/men.png" id="img2" class="" alt=""  />
+			<img src="image/lai.png" id="img3" class="" alt=""/>
+			<img src="image/la.png" id="img4" class="" alt=""/>
+			<img src="image/xinxin.png" id="img5" alt="" />
+			<img src="image/luobo.png" id="img6" alt="" />
+		</div>
+		<img class="yun2" src="image/yun2.png" alt="" />
+		<div class="tuozi">
+			<img class="tuziImg" src="image/tuzi1.png" alt="" />
+			<div class="yanjingBox">	
+				<img class="yanjing" src="image/yanjing.png" alt="" />
+			</div>
+		</div>
+	</div>
+	<div class="showText">
+		<div class="textDiv">
+			<div class="textZero sameCss">
+				<div class="textDivTitle">元气小说网与亲爱的你们见面啦~</div>
+				<p>经过精心准备，元气小说网与亲爱的你们见面啦~~~~</p>
+				<p>也许，对大家来说，元气小说网还是一个陌生的名字；但是对我们来说，数字阅读却从来不陌生。</p>
+			</div>
+			<div class="textOne sameCss">
+				<div class="sameCssImg">
+					<img src="image/01.png" alt="" />
+				</div>
+				<p>在过去的十数年里：</p>
+				<p>我们是手机出版发行界制定规则的人；</p>
+				<p>我们为中国版权保护中心数字版权公共服务平台提供技术和运营支撑；</p>
+				<p>我们是咪咕阅读、天翼阅读的运营支撑方之一；</p>
+				<p>我们是咪咕阅读、天翼阅读的运营支撑方之一；</p>
+				<p>我们是阿里、新浪第三方平台的长期合作伙伴。</p>
+			</div>
+			<div class="textTwo sameCss">
+				<div class="sameCssImg">
+					<img src="image/02.png" alt="" />
+				</div>
+				<p>我们拥有“微版权”、“华云音乐”、“版权家”、“就爱就玩”4个品牌的公共服务平台，实现了为版权人提供文字作品、游戏、动漫、音乐、视频等一站式数字版权公共服务的解决方案。</p>
+			</div>
+			<div class="textThree sameCss">
+				<div class="sameCssImg">
+					<img src="image/03.png" alt="" />
+				</div>
+				<p>而现在，我们献上元气小说网，从内容源头再次整合我们的资源，与作者、读者共享数字阅读的无限精彩。</p>
+				<p>我们准备好了。</p>
+				<p>亲爱的你，准备好了吗？</p>
+			</div>
+		</div>
+		<div class="btnDiv">
+			<div class="btn1">
+				<img src="image/di2.png" alt="" class="btnImg animated bounce infinite" />
+				<div class="btnBg1"></div>
+				<img src="image/di1.png" alt="" class="btnLuobo1 animated bounce infinite" />
+			</div>
+			<div class="btn2">
+				<img src="image/du.png" alt="" class="btnImg animated bounce infinite" />
+				<div class="btnBg2"></div>
+				<img src="image/du1.png" alt="" class="btnLuobo1 animated bounce infinite" />
+			</div>
+		</div>
+	</div>
+</section>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+	function TopImgMove(){
+		setTimeout(function(){
+	        $('#img1').show().addClass('animated bounceInDown');
+	        setTimeout(function(){
+	        	$('#img2').show().addClass('animated bounceInDown');
+	        	setTimeout(function(){
+		        	$('#img3').show().addClass('animated bounceInDown');
+		        	setTimeout(function(){
+			        	$('#img4').show().addClass('animated bounceInDown');
+			        	setTimeout(function(){
+				        	$('#img5').show().addClass('animated rollIn');
+				        	setTimeout(function(){
+				        		$('#img5').removeClass('rollIn').addClass("pulse infinite");
+					        	$('#img6').show().addClass('animated lightSpeedIn');
+					        	setTimeout(function(){
+					        		$('#img6').removeClass('lightSpeedIn').addClass("pulse infinite");
+						        },500);
+					        },1000);
+					        $(".tuozi").show().addClass("animated bounceInLeft")
+					        $(".showText").show();
+				        },300);
+			        },300);
+		        },300);
+	        },300);
+	    }, 100);
+	}
+	TopImgMove();
+		$(".yanjing").addClass("animated flash");
+		setInterval(function(){
+			$(".yanjing").removeClass("animated flash");
+				setTimeout(function(){
+					$(".yanjing").addClass("animated flash");
+				},1000)
+		},2500)
+	
+</script>
+<script>
+	 (function (doc, win) {  
+      var docEl = doc.documentElement,  
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',  
+        recalc = function () {  
+          var clientWidth = docEl.clientWidth;  
+          if (!clientWidth) return;  
+          docEl.style.fontSize = 37.5 * (clientWidth / 375) + 'px';  
+        };  
+
+      if (!doc.addEventListener) return;  
+      win.addEventListener(resizeEvt, recalc, false);  
+      doc.addEventListener('DOMContentLoaded', recalc, false);  
+    })(document, window);
+</script>
+<script type="text/javascript">
+	
+</script>
+</body>
+</html>

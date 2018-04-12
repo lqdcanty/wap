@@ -1,0 +1,34 @@
+<header class="header_bar">
+    <div class="header_warp">
+        <a class="goback_btn fl" ng-click="dirDetail()">
+        	<img src="image/back.png" alt="">
+    		<span>返回</span>
+        </a>
+        <div class="page_title">目录</div>
+        <a class="search_btn fr" ui-sref="serach">搜索</a>
+    </div>
+</header>
+<div style="height:1.17333333rem;"></div>
+<section class="book_catalogue chapterList_fullpage">
+	<div class="content" ng-repeat="dir in volumeList">
+		<h3 class="book_name" ng-bind="dir.volumeName"></h3>
+		<ul class="chapter_list" id="J-chapterList">
+			<li ng-repeat="dirc in dir.chapterList" ng-click="content(dirc)">
+				<span class="ellipsis read_title" ng-bind="dirc.chapterName"></span>
+				<span class="fr mgr30 read_comeon" ng-if="dirc.reading">继续阅读</span>
+				<img class="vip" ng-src="image/vip.png" ng-show="dirc.readPermission==='vip'&&(!dirc.purchased)">
+			</li>
+		</ul>
+	</div>
+<!-- 	 -->
+	<div class="" style="height: 1.5rem" ng-show="loadingSmall"></div>
+	<div  class="loadingImgBottom" ng-show="loadingSmall">
+        <img src="image/loading.png" alt="">
+        <span>加载中</span>
+    </div>
+</section>
+<div ng-show="loading" class="loadingImg">
+    <img src="image/loading.png" alt="">
+</div>
+<p class="yq_tips_box" ng-show="isTipContent"><span ng-bind="tipContent"></span></p>
+

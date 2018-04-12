@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="baidu-site-verification" content="VqmkEskDEE" />
+    <!--[禁用页面缓存 start]-->
+    
+    <!--[禁用页面缓存 end]-->
+    <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="T0xBNUxGQ0p5IRVUHyMZGwN5JVh4FnocAWE0BRw0JjpiKAJPfBEZDQ==">
+    <title>{{title}}</title>
+    <meta name="keywords" content="元气,元气阅读,元气说,小说,言情小说,免费小说,好看的小说,都市小说,玄幻小说,网络小说,鬼故事,原创网络文学,免费小说下载">
+    <meta name="description" content="元气小说网提供原创小说在线阅读，包含总裁、青春、穿越、宫斗、宅斗、灵异、玄幻、都市等一系列作品的在线阅读。">
+    <!--css样式-->
+    <link rel="stylesheet" href="css/index.css">
+    <!--js文件-->
+    <script>
+        var _hmt = _hmt || [];
+        _hmt.push(['_setUserTag', '2189',  "购买量(新建)"]);
+        _hmt.push(['_trackOrder', {
+              "orderId": "[ORDER_ID]",
+              "orderTotal": "[ORDER_TOTAL]",
+              "item": [
+                  {
+                      "skuId": "[SKU_ID]",
+                      "skuName": "[SKU_NAME]",
+                      "category": "[CATEGORY]",
+                      "Price": "[PRICE]",
+                      "Quantity": "[QUANTITY]"
+                  }
+              ]}
+          ]);
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?1f61fb6fb679e6332961837365c1a6f1";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+
+<body>
+  <div style ='margin:0 auto;width:0px;height:0px;overflow:hidden;'>
+  <img src='http://fdfs.oqxiaoshuo.com:80/group2/M00/00/03/CgoKDVomBQeATmIDAAAQT0r-Q_4568.png' / >
+  </div>
+</body>
+<body>
+	<div ui-view class="body_box">
+  
+	</div><!-- 这里就是指令 -->
+
+	<script>
+		 (function (doc, win) {  
+          var docEl = doc.documentElement,  
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',  
+            recalc = function () {  
+              var clientWidth = docEl.clientWidth;  
+              if (!clientWidth) return;  
+              docEl.style.fontSize = 37.5 * (clientWidth / 375) + 'px';  
+            };  
+  
+          if (!doc.addEventListener) return;  
+          win.addEventListener(resizeEvt, recalc, false);  
+          doc.addEventListener('DOMContentLoaded', recalc, false);  
+        })(document, window);
+	</script>
+  <script>
+    document.body.addEventListener('touchstart', function () { });
+    document.body.addEventListener('touchend', function () { });
+  </script>
+	<script src="vendor/angular/angular.min.js" charset="utf-8"></script>
+  <script src="vendor/angular/angular.min.js.map" charset="utf-8"></script>
+	<script src="vendor/angular-ui-router/release/angular-ui-router.min.js" charset="utf-8"></script>
+  <script src="vendor/jquery/dist/jquery.min.js" charset="utf-8"></script>
+  <script src="vendor/swiper/dist/js/swiper.min.js" charset="utf-8"></script>
+  <script src="vendor/swiper/dist/js/maps/swiper.min.js.map" charset="utf-8"></script>
+  <script src="vendor/angular-cookies/angular-cookies.min.js" charset="utf-8"></script>
+  <script src="vendor/angular-cookies/angular-cookies.min.js.map" charset="utf-8"></script>
+  <script src="vendor/angular-validation/dist/angular-validation.js" charset="utf-8"></script>
+  <script src="vendor/angular-md5/angular-md5.min.js" charset="utf-8"></script>
+  <script src="vendor/angular-md5/angular-md5.min.js.map" charset="utf-8"></script>
+  <script src="vendor/angular-sanitize/angular-sanitize.min.js" charset="utf-8"></script>
+  <script src="vendor/angular-sanitize/angular-sanitize.min.js.map" charset="utf-8"></script>
+  <script src="vendor/ng-file-upload/ng-file-upload-all.min.js" charset="utf-8"></script>
+  <script src="vendor/ng-file-upload/ng-file-upload-all.min.js" charset="utf-8"></script>
+  <script src="js/index.js" charset="utf-8"></script>
+</body>
+</html>

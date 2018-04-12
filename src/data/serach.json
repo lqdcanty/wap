@@ -1,0 +1,53 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+     "data":{
+            "pageNum":1,
+            "pageSize":20,
+            "total":6,
+            "list":[
+               {
+                    "bookId":1,
+                    "bookName":"言情小说的名字可能长，预留一行，超过隐藏。。。",
+                    "introduction":"小说简介,最长可以设置两行",
+                    "author":"作者",
+                    "imgUrl":"image/auth.png",
+                    "bookClass":"玄幻仙侠",
+                    "bookCover":"image/982728a57ba.jpg"
+                },{
+                    "bookId":1,
+                    "bookName":"言情小说的名字可能长，预留一行，超过隐藏。。。",
+                    "introduction":"小说简介,最长可以设置两行",
+                    "author":"作者",
+                    "imgUrl":"image/auth.png",
+                    "bookClass":"玄幻仙侠",
+                    "bookCover":"image/982728a57ba.jpg"
+                },{
+                    "bookId":1,
+                    "bookName":"言情小说的名字可能长，预留一行，超过隐藏。。。",
+                    "introduction":"小说简介,最长可以设置两行",
+                    "author":"作者",
+                    "imgUrl":"image/auth.png",
+                    "bookClass":"玄幻仙侠",
+                    "bookCover":"image/982728a57ba.jpg"
+                },{
+                    "bookId":1,
+                    "bookName":"言情小说的名字可能长，预留一行，超过隐藏。。。",
+                    "introduction":"小说简介,最长可以设置两行",
+                    "author":"作者",
+                    "imgUrl":"image/auth.png",
+                    "bookClass":"玄幻仙侠",
+                    "bookCover":"image/982728a57ba.jpg"
+                },{
+                    "bookId":1,
+                    "bookName":"言情小说的名字可能长，预留一行，超过隐藏。。。",
+                    "introduction":"小说简介,最长可以设置两行",
+                    "author":"作者",
+                    "imgUrl":"image/auth.png",
+                    "bookClass":"玄幻仙侠",
+                    "bookCover":"image/982728a57ba.jpg"
+                }
+            ]
+        }
+}

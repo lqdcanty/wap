@@ -1,0 +1,39 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+     "data":{
+            "bookList":[
+               {
+                    "bookId":1,
+                    "bookName":"11言情小说的名字可能长，预留一行，超过隐藏。。。",
+                    "bookCover":"image/9fac924797a.jpg",
+                    "introduction":"小说简介,最长可以设置两行",
+                    "author":"作者",
+                    "concern":100,
+                    "reading":200,
+                    "bookClass":"玄幻仙侠"
+                },
+                {
+                    "bookId":2,
+                    "bookName":"22言情小说的名字可能长，预留一行，超过隐藏。。。",
+                    "bookCover":"image/33dc98ae731.jpg",
+                     "introduction":"小说简介,最长可以设置两行",
+                     "author":"作者",
+                    "concern":100,
+                    "reading":200,
+                    "bookClass":"玄幻仙侠"
+                },
+                {
+                    "bookId":1,
+                    "bookName":"33言情小说的名字可能长，预留一行，超过隐藏。。。",
+                    "bookCover":"image/59aca75e51c.jpg",
+                    "introduction":"小说简介,最长可以设置两行",
+                    "author":"作者",
+                    "concern":100,
+                    "reading":200,
+                    "bookClass":"玄幻仙侠"
+                }
+            ]
+       }
+}

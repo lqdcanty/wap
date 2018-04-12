@@ -1,0 +1,72 @@
+ <div class="book_content {{isColor1?'color1':''}} {{isColor2?'color2':''}} {{isColor3?'color3':''}} {{isColor4?'color4':''}} {{isColor5?'color5':''}}" id="J-bookContent">	
+	<h3 ng-bind="bookContent.chapterName"></h3>
+	<div class="tool_bar" id="J-toolBar">
+		<div class="ver-mid mgl20">
+			<a class="back_book ver-mid {{isColor5?'color5':''}}" ng-click="goDetail()">返回书籍</a>
+			<span class="split-line">|</span>
+			<a class="back_book ver-mid {{isColor5?'color5':''}}" ng-click="goDirectory()">章节目录</a>
+		</div>
+		<div class="ol bgColor ver-mid">
+			<div class="content" id="J-bgColor">
+				<a href="javascript:;" class="ver-mid bg-btn mgl10 bg01 J-bg01 {{$index===ii?'on':''}}" ng-repeat="color in colorArr" ng-bind="color.name" ng-click="colorClick(color)"></a>
+			</div>
+		</div>
+		<div class="fontSize ver-mid" id="changeBg">
+			<a href="javascript:" class="btn-chgfs ver-mid J-fsJian" id="J-fsJian" ng-click="litter()"></a>
+			<a href="javascript:" class="btn-chgfs ver-mid J-fsJia" id="J-fsJia" ng-click="big()"></a>
+		</div>
+	</div>
+	<!-- <div class="chapter" id="J-chapterContent" ng-bind="bookContent.content">
+	
+	</div> -->
+	<div class="chapter" id="J-chapterContent" ng-bind-html="bookContent.content|trust2Html">
+		
+	</div>
+	<!-- 文字推荐 -->
+	<div class="wordRecommend" ng-show="wordRecommendShow">
+		<a ng-repeat="a in wordRecommedList" class="wordRecommendName" ng-bind="a.bookName" href="{{a.bookUrl}}"></a>
+	</div>
+	<!-- 关于二维码 -->
+	<div class="QRcode" ng-show="QRIsShow">
+		<div class="QRcodeText">
+			<p>长按二维码&nbsp;&nbsp;关注公众号</p>方便您下次阅读进入公众号后，点击下方菜单“最近阅读”即可继续阅读本书。
+		</div>
+		<div class="QRcodeImg">
+			<img src="{{qrImgUrl}}" alt="">
+		</div>
+	</div>
+
+	<div ng-show="loading" class="loadingImg">
+		<img src="image/loading.png" alt="">
+	</div>
+	
+	<!-- 章节切换 -->
+	<div class="gobuy_bar fixed clearfix">
+    		<!-- 没有上一页或下一页时 链接改为；javascript:void(0); 添加样式：disable 标示为不可用 -->
+		<a  class="btn btn-mid bg-white fl {{bookContent.hasPre?'':'disable'}}" ng-click="bookdetailS(bookContent.preChapterId,bookContent.bookId)">上一章</a>
+		<a class="btn btn-mid bg-white btn-menu" ui-sref="directory({bookId:bookContent.bookId})">目录</a>
+		<a  ng-click="bookdetailX(bookContent.nextChapterId,bookContent.bookId)" class="btn btn-mid bg-red fr {{bookContent.hasNext?'':'disable'}}">下一章</a>
+	</div>
+	<!-- 章节切换 end -->       
+</div>
+<div style="height: 1.68rem;"></div>
+<p class="yq_tips_box" ng-show="isTipContent"><span ng-bind="tipContent"></span></p>
+<div class="chapterAutoPurchaseWrap" ng-show="isChapterAutoPurchase" >
+<!-- ng-show="isChapterAutoPurchase" -->
+	<div class="chapterAutoPurchasebox">
+		<p>本章节为收费章节，按1000字/5<span style="color:rgba(9,205,155,1)">元气</span>计费，将收取{{chapterMoney}}<span style="color:rgba(9,205,155,1)">元气</span>。</p>
+		<p class="radioBox">
+			<label for="" class="radioBoxLabel" ng-click="AutoCircleFun()">
+				<em>	
+					<input type="checkbox">
+					<b ng-show="AutoCircle"></b>
+				</em>
+				<span>自动购买之后章节</span>
+			</label>
+		</p>
+		<p class="autoPurchaseboxButton">
+		 	<button ng-click="closeAutoPurchase()">取消</button>
+		 	<button  ng-click="yesAutoPurchase()" id="AutoYes">确认</button>
+		</p>
+	</div>	
+</div>

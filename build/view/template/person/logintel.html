@@ -1,0 +1,21 @@
+<section class="container" ng-if="isRegister">
+    <div class="reg_box">
+        <form id="reg_phone_form" method="post"   data-api="/www/user/checkuser">
+            <div class="reg_items">
+                <div class="reg_item mgt30 clearfix">
+                    <span class="reg_name">+86</span>
+                    <div class="reg_text">
+                    <input name="_csrf" type="hidden" id="_csrf" value="ZS5WOG1TSlciRTMVWT8mGg5UJwwuPQkFJkgHDCc1M2AvTDJZAD9.MA==">
+                        <input type="tel" name="phoneNum" id="phoneNum" placeholder="请输入手机号码" maxlength="11" class="reg_int"/>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="reg_tips mgt20">
+            用手机号码注册可以方便找回和交到更多朋友…
+        </div>
+        <div class="login_btn_box mgt90">
+            <a href="javascript:;" id="thisBtn" class="btn btn_green" ng-click="next1()">下一步</a>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,96 @@
+{
+  "httpCode":200,
+  "msg":"请求成功",
+  "timestamp":1504168489199,
+  "data":{
+    "pageNum":1,
+    "pageSize":3,
+    "total":6,
+    "list":{
+      "editor":[
+      {
+        "id":11,
+        "bookName": "娇妻撩人1：桀骜总裁温宠入骨1",
+        "imgUrl":"image/7e84e237176.jpg",
+        "bookFavorite":"123",
+        "bookSee":"456",
+        "introduction":"父亲养小三贪污入狱前,诱骗她上了A市大总裁的床.<br/>她:'总裁不要,我不是故意的!'<br/>总裁:'不是故意的?那为什么诱惑我?'<br/>她:'啊?我没有!'"
+      },{
+        "id":12,
+        "bookName": "娇妻撩人2：桀骜总裁温宠入骨2",
+        "imgUrl":"image/9fac924797a.jpg",
+        "bookFavorite":"123",
+        "bookSee":"456",
+        "introduction":"父亲养小三贪污入狱前,诱骗她上了A市大总裁的床.<br/>她:'总裁不要,我不是故意的!'<br/>总裁:'不是故意的?那为什么诱惑我?'<br/>她:'啊?我没有!'"
+      },{
+        "id":13,
+        "bookName": "娇妻撩人3：桀骜总裁温宠入骨3",
+        "imgUrl":"image/28b7fd07b90.jpg",
+        "bookFavorite":"123",
+        "bookSee":"456",
+        "introduction":"父亲养小三贪污入狱前,诱骗她上了A市大总裁的床.<br/>她:'总裁不要,我不是故意的!'<br/>总裁:'不是故意的?那为什么诱惑我?'<br/>她:'啊?我没有!'"
+      }
+    ],
+      "bestselling":[
+     {
+        "id":11,
+        "bookName": "娇妻撩人1：桀骜总裁温宠入骨1",
+        "imgUrl":"image/7e84e237176.jpg",
+        "bookFavorite":"123",
+        "bookSee":"456",
+        "introduction":"父亲养小三贪污入狱前,诱骗她上了A市大总裁的床.<br/>她:'总裁不要,我不是故意的!'<br/>总裁:'不是故意的?那为什么诱惑我?'<br/>她:'啊?我没有!'"
+      },{
+        "id":12,
+        "bookName": "娇妻撩人2：桀骜总裁温宠入骨2",
+        "imgUrl":"image/9fac924797a.jpg",
+        "bookFavorite":"123",
+        "bookSee":"456",
+        "introduction":"父亲养小三贪污入狱前,诱骗她上了A市大总裁的床.<br/>她:'总裁不要,我不是故意的!'<br/>总裁:'不是故意的?那为什么诱惑我?'<br/>她:'啊?我没有!'"
+      },{
+        "id":13,
+        "bookName": "娇妻撩人3：桀骜总裁温宠入骨3",
+        "imgUrl":"image/28b7fd07b90.jpg",
+        "bookFavorite":"123",
+        "bookSee":"456",
+        "introduction":"父亲养小三贪污入狱前,诱骗她上了A市大总裁的床.<br/>她:'总裁不要,我不是故意的!'<br/>总裁:'不是故意的?那为什么诱惑我?'<br/>她:'啊?我没有!'"
+      }
+    ],
+    "boy":[
+      {
+        "id":11,
+        "bookName": "娇妻撩人1：桀骜总裁温宠入骨1",
+        "imgUrl":"image/7e84e237176.jpg",
+        "bookFavorite":"123",
+        "bookSee":"456",
+        "introduction":"父亲养小三贪污入狱前,诱骗她上了A市大总裁的床.<br/>她:'总裁不要,我不是故意的!'<br/>总裁:'不是故意的?那为什么诱惑我?'<br/>她:'啊?我没有!'"
+      },{
+        "id":12,
+        "bookName": "娇妻撩人2：桀骜总裁温宠入骨2",
+        "imgUrl":"image/9fac924797a.jpg",
+        "bookFavorite":"123",
+        "bookSee":"456",
+        "introduction":"父亲养小三贪污入狱前,诱骗她上了A市大总裁的床.<br/>她:'总裁不要,我不是故意的!'<br/>总裁:'不是故意的?那为什么诱惑我?'<br/>她:'啊?我没有!'"
+      },{
+        "id":13,
+        "bookName": "娇妻撩人3：桀骜总裁温宠入骨3",
+        "imgUrl":"image/28b7fd07b90.jpg",
+        "bookFavorite":"123",
+        "bookSee":"456",
+        "introduction":"父亲养小三贪污入狱前,诱骗她上了A市大总裁的床.<br/>她:'总裁不要,我不是故意的!'<br/>总裁:'不是故意的?那为什么诱惑我?'<br/>她:'啊?我没有!'"
+      }
+    ],
+    "special":[
+      {
+        "id":11,
+        "bookName": "娇妻撩人1：桀骜总裁温宠入骨1",
+        "imgUrl":"image/accbdb769cb.jpg"
+       
+      },{
+        "id":12,
+        "bookName": "娇妻撩人2：桀骜总裁温宠入骨2",
+        "imgUrl":"image/b4da1f7601e.jpg"
+      }
+    ]
+    }
+  }
+}

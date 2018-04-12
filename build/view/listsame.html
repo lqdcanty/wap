@@ -1,0 +1,20 @@
+<!--<div app-headbar text="{{textstylename}}"></div>-->
+<header class="header_bar">
+    <div class="header_warp">
+        <a class="goback_btn fl" ui-sref="class">
+        	<img src="image/back.png" alt="">
+    		<span>返回</span>
+        </a>
+        <div class="page_title">{{textstylename}}</div>
+    </div>
+</header>
+<div style="height:1.17333333rem;"></div>
+<div app-listsame com="listsameList"></div>
+<p class="yq_tips_box" ng-show="isTipContent"><span ng-bind="tipContent"></span></p>
+<div  class="loadingImgBottom" ng-show="loadingSmall">
+    <img src="image/loading.png" alt="">
+    <span>加载中</span>
+</div>
+<div ng-show="loading" class="loadingImg">
+    <img src="image/loading.png" alt="">
+</div>

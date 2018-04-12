@@ -1,0 +1,22 @@
+<header class="header_bar">
+    <div class="header_warp">
+        <a class="goback_btn fl" ng-click="gobackBtn()">
+        	<img src="image/back.png" alt="">
+    		<span>返回</span>
+        </a>
+        <div class="page_title">发表评论</div>
+        <a class="search_btn fr" ui-sref="serach">搜索</a>
+    </div>
+</header>
+<!-- <div app-comment></div> -->
+<div style="height:1.17333333rem;"></div>
+<section class="container">
+	<form action="" name="commentForm" id="commentForm">
+		<textarea class="comment_writeContent" id="" placeholder="请留下你对这本书的想法或感受" ng-change="wordNub(0)" ng-model="commentContent" name="comment" validator="required,comment"></textarea>
+		<p class="comment_limit"><span class="comment_limitsapn">{{text}}</span>/200</p>
+		<div class="comment_submit">
+		 	<a href="javascript:;" id="thisBtn" class="btn btn_green" validation-submit='commentForm' ng-click="submit()">提交</a>
+		</div>
+	</form>
+</section>
+<p class="yq_tips_box" ng-show="isTipContent"><span ng-bind="tipContent"></span></p>

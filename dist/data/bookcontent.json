@@ -1,0 +1,15 @@
+{
+	"httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+    "data":{
+        "chapterId":1,
+        "chapterName":"第一章",
+        "bookId":1,
+        "content":"章节内容章节内容章节内容章节内容章节内容章节内容章节内容章节内容章节内容章节内容章节内容章节内容章节内容章节内容章节内容章节内容章节内容章节内容",
+        "hasPre":false,
+        "hasNext":true,
+        "nextChapterId":2,
+        "preChapterId":-1        
+    }
+}
